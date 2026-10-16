@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LH Microfinance</title>
+<meta name="description" content="LH Microfinance: small loans that help you grow. Apply, track EMIs and pay by UPI in Hindi, Gujarati or English.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Baloo+Bhai+2:wght@600;700;800&family=Mukta:wght@400;500;600;700&family=Mukta+Vaani:wght@400;500;600;700&display=swap">
+<style>.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-tile::selection{background:transparent}.leaflet-safari .leaflet-tile{image-rendering:-webkit-optimize-contrast}.leaflet-safari .leaflet-tile-container{width:1600px;height:1600px;-webkit-transform-origin:0 0}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg{max-width:none!important;max-height:none!important}.leaflet-container.leaflet-touch-zoom{-ms-touch-action:pan-x pan-y;touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{-ms-touch-action:pinch-zoom;touch-action:none;touch-action:pinch-zoom}.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{-ms-touch-action:none;touch-action:none}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-container a{-webkit-tap-highlight-color:rgba(51,181,229,.4)}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;-moz-box-sizing:border-box;box-sizing:border-box;z-index:800}.leaflet-overlay-pane svg{-moz-user-select:none}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-vml-shape{width:1px;height:1px}.lvml{behavior:url(#default#VML);display:inline-block;position:absolute}.leaflet-control{position:relative;z-index:800;pointer-events:visiblePainted;pointer-events:auto}.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-control{float:left;clear:both}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity .2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0}.leaflet-zoom-anim .leaflet-zoom-animated{will-change:transform}.leaflet-zoom-anim .leaflet-zoom-animated{-webkit-transition:-webkit-transform .25s cubic-bezier(0,0,.25,1);-moz-transition:-moz-transform .25s cubic-bezier(0,0,.25,1);transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{-webkit-transition:none;-moz-transition:none;transition:none}.leaflet-zoom-anim .leaflet-zoom-animated.leaflet-zoom-hide{visibility:hidden}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair}.leaflet-popup-pane,.leaflet-control{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:move;cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive,svg.leaflet-image-layer.leaflet-interactive path{pointer-events:visiblePainted;pointer-events:auto}.leaflet-container{background:#ddd;outline-offset:1px}.leaflet-container a.leaflet-active{outline:2px solid orange}.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,.5)}.leaflet-container{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;font-size:12px;font-size:.75rem;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:black}.leaflet-bar a,.leaflet-control-layers-toggle{background-position:50% 50%;background-repeat:no-repeat;display:block}.leaflet-bar a:hover,.leaflet-bar a:focus{background-color:#f4f4f4}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-touch .leaflet-bar a:first-child{border-top-left-radius:2px;border-top-right-radius:2px}.leaflet-touch .leaflet-bar a:last-child{border-bottom-left-radius:2px;border-bottom-right-radius:2px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px "Lucida Console",Monaco,monospace;text-indent:1px}.leaflet-touch .leaflet-control-zoom-in{font-size:22px}.leaflet-touch .leaflet-control-zoom-out{font-size:20px}.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,.4);background:#fff;border-radius:5px}.leaflet-control-layers-toggle{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QIECiAHcMj5VQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAACiSURBVEjH7ZaxCsIwFEXPW4ugCDr4AUXo0P/oP+gHOLq5dqhCYMHBQVehSxcXBRERD4IWOBRN+gTFSaFKBw8khJP3kksCAAAAAAAAnFF+ZULTdPsW3Zb3W16vqWGKU7bHJrkYGGGLAAAAAAAAAAAAAAAAAABg0xwvx6gAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAPAGMJp7eR5H9XQAAAAASUVORK5CYII=);width:36px;height:36px}.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px}.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none}.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative}.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff}.leaflet-control-layers-scrollbar{overflow-y:scroll;overflow-x:hidden;padding-right:5px}.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px}.leaflet-control-layers label{display:block;font-size:1.08333em}.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px}.leaflet-default-icon-path{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAApCAYAAADAk4LOAAAFgUlEQVR4Aa1XA5BjWRTN2oW17d3YaZtr2962HaT9NblntTW3m7tnokysmrkDAhBVjZsW6wAAAABJRU5ErkJggg==)}.leaflet-container .leaflet-control-attribution{background:#fff;background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333;line-height:1.4}.leaflet-control-attribution a{text-decoration:none}.leaflet-control-attribution a:hover,.leaflet-control-attribution a:focus{text-decoration:underline}.leaflet-attribution-flag{display:inline!important;vertical-align:baseline!important;width:1em;height:.6669em}.leaflet-left .leaflet-control-scale{margin-left:5px}.leaflet-bottom .leaflet-control-scale{margin-bottom:5px}.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;font-size:11px;white-space:nowrap;overflow:hidden;-moz-box-sizing:border-box;box-sizing:border-box;background:#fff;background:rgba(255,255,255,.5)}.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px}.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777}.leaflet-touch .leaflet-control-attribution,.leaflet-touch .leaflet-control-layers,.leaflet-touch .leaflet-bar{box-shadow:none}.leaflet-touch .leaflet-control-layers,.leaflet-touch .leaflet-bar{border:2px solid rgba(0,0,0,.2);background-clip:padding-box}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-content{margin:13px 24px 13px 20px;line-height:1.3;font-size:1.08333em}.leaflet-popup-content p{margin:1.3em 0}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;text-align:center;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;text-decoration:none;background:transparent}.leaflet-container a.leaflet-popup-close-button:hover,.leaflet-container a.leaflet-popup-close-button:focus{color:#585858}.leaflet-popup-scrolled{overflow:auto}.leaflet-oldie .leaflet-popup-content-wrapper{-ms-zoom:1}.leaflet-oldie .leaflet-popup-tip{width:24px;-ms-filter:"progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";filter:progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)}.leaflet-oldie .leaflet-popup-tip-container{margin-top:-1px}.leaflet-oldie .leaflet-control-zoom,.leaflet-oldie .leaflet-control-layers,.leaflet-oldie .leaflet-popup-content-wrapper,.leaflet-oldie .leaflet-popup-tip{border:1px solid #999}.leaflet-div-icon{background:#fff;border:1px solid #666}.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:3px;color:#222;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;user-select:none;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.4)}.leaflet-tooltip.leaflet-interactive{cursor:pointer;pointer-events:auto}.leaflet-tooltip-top:before,.leaflet-tooltip-bottom:before,.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{position:absolute;pointer-events:none;border:6px solid transparent;background:transparent;content:""}.leaflet-tooltip-bottom:before{top:0;left:50%;margin-left:-6px;margin-top:-12px;border-bottom-color:#fff}.leaflet-tooltip-top:before{bottom:0;left:50%;margin-left:-6px;margin-bottom:-12px;border-top-color:#fff}.leaflet-tooltip-left:before{top:50%;right:0;margin-top:-6px;margin-right:-12px;border-left-color:#fff}.leaflet-tooltip-right:before{top:50%;left:0;margin-top:-6px;margin-left:-12px;border-right-color:#fff}
+</style>
+<style>:root{
+  --ink:#16152B;--ink2:#3A3856;--muted:#5E5C78;--faint:#8F8DA8;
+  --navy:#23206B;--indigo:#3B36A8;--lav:#ECEBFA;--lav2:#D6D3F6;--lav3:#C9C6EE;
+  --gold:#F2A900;--gold2:#FFC53D;--leaf:#3DD68C;--green:#1F8A5B;--green-bg:#E2F4EA;--green-ink:#145238;
+  --amber-bg:#FDF1D3;--amber-ink:#5C3D00;--red:#A12C2C;--red-bg:#FBE5E5;
+  --bg:#F7F6FB;--surface:#FFFFFF;--line:#E4E2F2;--line2:#EFEEF7;
+  --hero:#23206B;--hero-ink:#F7F6FB;
+  --sh:0 12px 32px rgba(35,32,107,.12);
+  --fh:'Baloo 2',system-ui,sans-serif;--fb:'Mukta',system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#F1F0FB;--ink2:#D9D7F5;--muted:#B6B3E8;--faint:#8F8DB8;
+  --lav:#2A2770;--lav2:#3A3690;--lav3:#4B47A8;
+  --bg:#12113A;--surface:#1B1950;--line:#2E2B78;--line2:#262368;
+  --hero:#0D0C2B;--green-bg:#123A2A;--green-ink:#8BE6B8;--amber-bg:#3A2E0A;--amber-ink:#FFD77A;--red-bg:#3A1616;
+  --sh:0 12px 32px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#F1F0FB;--ink2:#D9D7F5;--muted:#B6B3E8;--faint:#8F8DB8;
+  --lav:#2A2770;--lav2:#3A3690;--lav3:#4B47A8;
+  --bg:#12113A;--surface:#1B1950;--line:#2E2B78;--line2:#262368;
+  --hero:#0D0C2B;--green-bg:#123A2A;--green-ink:#8BE6B8;--amber-bg:#3A2E0A;--amber-ink:#FFD77A;--red-bg:#3A1616;
+  --sh:0 12px 32px rgba(0,0,0,.4);color-scheme:dark}
+:root[lang="gu"]{--fh:'Baloo Bhai 2','Baloo 2',system-ui,sans-serif;--fb:'Mukta Vaani','Mukta',system-ui,sans-serif}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--fh);margin:0;line-height:1.12;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+@media(min-width:700px){.wrap{padding:0 28px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* logo */
+.mark{width:44px;height:44px;border-radius:14px;background:var(--indigo);display:flex;align-items:center;justify-content:center;flex:none}
+.word{font-family:var(--fh);font-weight:800;font-size:22px;white-space:nowrap;letter-spacing:-.3px}
+.word b{color:var(--gold);font-weight:800}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--navy) 94%,transparent);backdrop-filter:blur(10px);color:#F7F6FB;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.links{display:none;gap:4px}
+.links a{color:#D9D7F5;text-decoration:none;font-weight:600;font-size:15px;padding:8px 12px;border-radius:10px}
+.links a:hover{background:rgba(255,255,255,.1);color:#fff}
+@media(min-width:1040px){.links{display:flex}}
+.seg{display:flex;gap:2px;background:rgba(255,255,255,.1);padding:3px;border-radius:12px}
+.seg button{border:0;background:transparent;color:#C9C6EE;font-weight:700;font-size:14px;min-width:36px;height:32px;border-radius:9px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--navy)}
+.iconbtn{width:38px;height:38px;border-radius:19px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff}
+@media(max-width:480px){.nav .wrap{gap:8px}.nav .mark{width:36px;height:36px;border-radius:12px}.nav .mark svg{width:28px;height:28px}.nav .word{font-size:17px}.seg button{min-width:30px}.iconbtn{width:34px;height:34px}}
+.nav .dl{display:none}
+@media(min-width:640px){.nav .dl{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 24px;border-radius:18px;font:700 18px var(--fh);text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 8px 24px rgba(242,169,0,.35)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-indigo{background:var(--indigo);color:#fff;box-shadow:0 8px 24px rgba(59,54,168,.3)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+.btn-sm{height:42px;padding:0 16px;font-size:16px;border-radius:14px}
+
+/* hero */
+.hero{background:var(--hero);color:var(--hero-ink);position:relative;overflow:hidden;padding:56px 0 72px}
+.ripple{position:absolute;pointer-events:none;right:-180px;top:-80px;width:900px;height:900px;opacity:.9}
+.ripple circle{fill:none;stroke:#3B36A8;stroke-width:1.5;transform-origin:center;animation:rip 6s ease-in-out infinite}
+.ripple circle:nth-child(2){animation-delay:.6s}.ripple circle:nth-child(3){animation-delay:1.2s}.ripple circle:nth-child(4){animation-delay:1.8s}
+@keyframes rip{0%,100%{opacity:.25;transform:scale(.96)}50%{opacity:.6;transform:scale(1.02)}}
+.hero-grid{display:grid;gap:40px;align-items:center;position:relative}
+@media(min-width:920px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#D9D7F5;padding:6px 14px;border-radius:999px;font-size:14px;font-weight:600}
+.pill i{width:8px;height:8px;border-radius:4px;background:var(--leaf);box-shadow:0 0 0 4px rgba(61,214,140,.25)}
+.hero h1{font-size:clamp(40px,6.4vw,68px);font-weight:800;letter-spacing:-1px;margin:18px 0 10px}
+.hero h1 span{color:var(--gold)}
+.hero .hi{font-size:20px;color:#B6B3E8;margin-bottom:16px}
+.hero .lede{font-size:19px;color:#D9D7F5;max-width:560px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.trust{display:flex;align-items:center;gap:8px;margin-top:20px;font-size:14px;color:#C9C6EE}
+.stage{position:relative;display:flex;justify-content:center;min-height:560px}
+.float{position:absolute;background:#fff;color:#16152B;border-radius:18px;padding:12px 14px;box-shadow:0 18px 40px rgba(0,0,0,.28);display:flex;align-items:center;gap:10px;font-size:14px;animation:bob 5s ease-in-out infinite;z-index:2}
+.float b{display:block;font-family:'Baloo 2',sans-serif;font-size:17px;line-height:1.1}
+.float small{color:#5E5C78}
+.float .ic{width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.f1{left:0;top:70px}.f2{right:0;top:250px;animation-delay:1.2s}.f3{left:10px;bottom:40px;animation-delay:2.4s}
+@media(max-width:520px){.f1{left:-4px}.f2{right:-4px}.float{transform:scale(.88)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* phone */
+.phone{--s:.72;width:calc(390px*var(--s) + 20px);height:calc(844px*var(--s) + 20px);border-radius:46px;background:#0B0A22;padding:10px;box-shadow:0 30px 70px rgba(10,8,40,.45),inset 0 0 0 2px #2A2770;position:relative;flex:none}
+.phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:90px;height:22px;border-radius:12px;background:#0B0A22;z-index:3}
+.phone .vp{width:calc(390px*var(--s));height:calc(844px*var(--s));border-radius:36px;overflow:hidden;position:relative;background:#F7F6FB}
+.phone .scr{position:absolute;inset:0 auto auto 0;width:390px;height:844px;transform:scale(var(--s));transform-origin:0 0;transition:opacity .45s ease,transform .45s ease;opacity:0;pointer-events:none}
+.phone .scr.on{opacity:1;pointer-events:auto}
+.phone .scr *{box-sizing:border-box}
+@media(max-width:400px){.phone{--s:.66}}
+
+/* sections */
+section{padding:84px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;letter-spacing:.6px;text-transform:uppercase;color:var(--indigo)}
+:root[data-theme="dark"] .eyebrow{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .eyebrow{color:var(--gold)}}
+.eyebrow::before{content:"";width:22px;height:4px;border-radius:2px;background:var(--gold)}
+.h2{font-size:clamp(32px,4.4vw,48px);font-weight:800;margin:10px 0 12px;letter-spacing:-.5px}
+.sub{font-size:19px;color:var(--muted);max-width:640px}
+
+/* chips strip */
+.strip{background:var(--surface);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding-top:20px;padding-bottom:20px}
+@media(min-width:820px){.strip .wrap{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.chip{display:flex;align-items:center;gap:12px;min-width:0}
+.chip .ic{width:46px;height:46px;border-radius:16px;background:var(--lav);display:flex;align-items:center;justify-content:center;flex:none}
+.chip b{display:block;font-family:var(--fh);font-size:18px;line-height:1.15}
+.chip small{color:var(--muted);font-size:14px;line-height:1.3;display:block}
+
+/* showcase */
+.show{display:grid;gap:40px;align-items:center;margin-top:44px}
+@media(min-width:920px){.show{grid-template-columns:1fr auto}.show.rev{grid-template-columns:auto 1fr}.show.rev .steps{order:2}}
+.show .phone{margin:0 auto}
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line);border-radius:22px;padding:16px 18px;cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s;position:relative;overflow:hidden}
+.step:hover{transform:translateX(4px)}
+.step[aria-selected="true"]{border-color:var(--indigo);box-shadow:var(--sh)}
+.step .n{width:42px;height:42px;border-radius:14px;background:var(--lav);color:var(--indigo);font:800 19px var(--fh);display:flex;align-items:center;justify-content:center;flex:none}
+:root[data-theme="dark"] .step .n{color:#fff}
+.step[aria-selected="true"] .n{background:var(--indigo);color:#fff}
+.step h3{font-size:20px;font-weight:700}
+.step p{font-size:15.5px;color:var(--muted);margin-top:2px}
+.step .bar{position:absolute;left:0;bottom:0;height:3px;background:var(--gold);width:0}
+.step[aria-selected="true"] .bar{animation:fill 6s linear forwards}
+.paused .step .bar{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.new{font:700 11px var(--fb);letter-spacing:.5px;background:var(--gold);color:#23206B;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;text-transform:uppercase}
+
+/* map section */
+.mapsec{background:var(--navy);color:#F7F6FB}
+.mapsec .sub{color:#C9C6EE}
+.mapsec .eyebrow{color:var(--gold)}
+.mapgrid{display:grid;gap:18px;margin-top:36px}
+@media(min-width:980px){.mapgrid{grid-template-columns:1.5fr 1fr;align-items:start}}
+.mapcard{background:#1B1950;border:1px solid #3A3690;border-radius:26px;overflow:hidden;position:relative}
+.maphead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #3A3690}
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--leaf)}
+.live::before{content:"";width:9px;height:9px;border-radius:5px;background:var(--leaf);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,214,140,.6)}100%{box-shadow:0 0 0 10px rgba(61,214,140,0)}}
+.filters{display:flex;gap:4px;background:rgba(255,255,255,.08);padding:4px;border-radius:14px;flex-wrap:wrap}
+.filters button{border:0;background:transparent;color:#C9C6EE;font-weight:600;font-size:14px;height:34px;padding:0 12px;border-radius:10px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:#fff;color:#23206B}
+#lhmap{width:100%;height:520px;background:#DCDAF0;position:relative;z-index:1}
+@media(max-width:600px){#lhmap{height:420px}}
+.maptools{display:flex;gap:8px;padding:10px 12px;border-bottom:1px solid #3A3690;flex-wrap:wrap}
+.maptools form{flex:1 1 220px;display:flex;gap:6px;min-width:0}
+.maptools input{flex:1;min-width:0;height:42px;border-radius:12px;border:1.5px solid #3A3690;background:#12113A;color:#fff;padding:0 12px;font:500 15px var(--fb)}
+.maptools input::placeholder{color:#8F8DB8}
+.maptools button{height:42px;border-radius:12px;border:0;padding:0 14px;font-weight:700;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.mt-go{background:var(--indigo);color:#fff}.mt-me{background:var(--gold);color:#23206B}.mt-in{background:rgba(255,255,255,.1);color:#fff;border:1px solid #3A3690!important}
+.lh-pin{position:relative;width:22px;height:22px}
+.lh-pin i{position:absolute;inset:0;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.lh-pin b{position:absolute;inset:0;border-radius:50%;animation:halo 2.4s ease-out infinite}
+.lh-pin.sel i{outline:3px solid #23206B;transform:scale(1.25)}
+.lh-me{width:20px;height:20px;border-radius:50%;background:#3B82F6;border:3px solid #fff;box-shadow:0 0 0 8px rgba(59,130,246,.25)}
+@keyframes halo{0%{transform:scale(.8);opacity:.7}100%{transform:scale(2.6);opacity:0}}
+.leaflet-container{font-family:var(--fb)}
+.leaflet-popup-content{margin:12px 14px;font-size:14px;color:#16152B}
+.maperr{position:absolute;inset:0;z-index:500;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;background:rgba(18,17,58,.88);color:#fff;font-size:16px}
+.maperr.on{display:flex}
+.maperr a{color:var(--gold);font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:14px;padding:12px 16px;border-top:1px solid #3A3690;font-size:13.5px;color:#C9C6EE}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:5px}
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.dev{background:#fff;color:#16152B;border-radius:24px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.dev-top{display:flex;align-items:center;gap:12px}
+.dev-top .ic{width:46px;height:46px;border-radius:15px;background:#ECEBFA;display:flex;align-items:center;justify-content:center;flex:none}
+.dev-top b{font-size:17px;letter-spacing:.3px}
+.dev-top small{display:block;color:#5E5C78;font-size:14px}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.b-fresh{background:#E2F4EA;color:#145238}.b-stale{background:#FDF1D3;color:#5C3D00}.b-off{background:#EFEEF7;color:#4A4866}.b-over{background:#FBE5E5;color:#7A1F1F}
+.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.metric{background:#F7F6FB;border-radius:16px;padding:10px 12px;min-width:0}
+.metric small{display:block;color:#5E5C78;font-size:13px}
+.metric b{font-family:'Baloo 2',sans-serif;font-size:20px;line-height:1.2;display:block;overflow-wrap:anywhere}
+.meter{height:7px;border-radius:4px;background:#E4E2F2;overflow:hidden;margin-top:4px}
+.meter i{display:block;height:100%;border-radius:4px;transition:width .5s}
+.rows{margin-top:12px;font-size:15px}
+.rows div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid #EFEEF7}
+.rows span:first-child{color:#5E5C78}
+.rows span:last-child{font-weight:600;text-align:right}
+.devlist{background:#1B1950;border:1px solid #3A3690;border-radius:24px;padding:6px;max-height:280px;overflow:auto}
+.devlist button{width:100%;display:flex;align-items:center;gap:10px;text-align:left;border:0;background:transparent;color:#F7F6FB;padding:10px 12px;border-radius:16px;cursor:pointer}
+.devlist button:hover,.devlist button[aria-current="true"]{background:#2A2770}
+.devlist .dot{width:10px;height:10px;border-radius:5px;flex:none}
+.devlist .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.devlist small{color:#B6B3E8;font-size:13px;white-space:nowrap}
+.consent{display:flex;gap:12px;align-items:flex-start;background:rgba(242,169,0,.12);border:1px solid rgba(242,169,0,.35);border-radius:18px;padding:14px 16px;font-size:15px;color:#FFE6A6}
+
+/* journeys */
+.tabs{display:inline-grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;background:var(--lav);padding:4px;border-radius:16px;margin-top:28px}
+.tabs button{border:0;background:transparent;height:46px;padding:0 18px;border-radius:12px;font-weight:700;font-size:16px;color:var(--muted);cursor:pointer;display:flex;align-items:center;gap:8px;justify-content:center}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 2px 8px rgba(35,32,107,.12)}
+.lane{display:grid;gap:14px;margin-top:24px;counter-reset:s}
+@media(min-width:760px){.lane{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.lane[hidden]{display:none}
+.jcard{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px;position:relative;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.in .jcard{opacity:1;transform:none}
+.in .jcard:nth-child(2){transition-delay:.1s}.in .jcard:nth-child(3){transition-delay:.2s}.in .jcard:nth-child(4){transition-delay:.3s}
+.jcard .ic{width:50px;height:50px;border-radius:16px;background:var(--lav);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.jcard h3{font-size:20px;font-weight:700}
+.jcard p{color:var(--muted);font-size:15.5px;margin-top:6px}
+.jcard::after{counter-increment:s;content:counter(s);position:absolute;top:16px;right:18px;font:800 34px var(--fh);color:var(--lav2)}
+
+/* trust */
+.tgrid{display:grid;gap:14px;margin-top:36px}
+@media(min-width:760px){.tgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px;transition:transform .2s,box-shadow .2s}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.tcard .ic{width:50px;height:50px;border-radius:16px;background:var(--lav);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.tcard h3{font-size:20px;font-weight:700}
+.tcard p{color:var(--muted);font-size:15.5px;margin-top:6px}
+
+/* download */
+.dlsec{padding:84px 0}
+.dlcard{background:var(--navy);color:#F7F6FB;border-radius:34px;padding:32px 22px;display:grid;gap:28px;position:relative;overflow:hidden}
+@media(min-width:900px){.dlcard{grid-template-columns:1.3fr 1fr;padding:48px}}
+.dlcard h2{font-size:clamp(30px,4vw,44px);font-weight:800}
+.dlcard p{color:#D9D7F5;font-size:18px;margin-top:10px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.facts span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:5px 12px;border-radius:999px;font-size:14px;font-weight:600;color:#ECEBFA}
+.install{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:10px;counter-reset:i}
+.install li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#ECEBFA}
+.install li::before{counter-increment:i;content:counter(i);width:28px;height:28px;border-radius:14px;background:var(--gold);color:#23206B;font:800 15px 'Baloo 2',sans-serif;display:flex;align-items:center;justify-content:center;flex:none}
+.qrbox{background:#fff;color:#16152B;border-radius:26px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;align-self:center}
+#qr{width:200px;height:200px;display:flex;align-items:center;justify-content:center}
+#qr img,#qr canvas{width:200px!important;height:200px!important}
+.qrbox small{color:#5E5C78;font-size:14px}
+
+footer{background:var(--hero);color:#C9C6EE;padding:40px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+
+/* ported screen motion (from Splash.dc.html) */
+.scr.on .sp-coin{transform-box:fill-box;transform-origin:center;animation:sp-coin .65s cubic-bezier(.2,.8,.2,1) both}
+.scr.on .sp-stem{stroke-dasharray:30;animation:sp-draw .45s ease-out .55s both}
+.scr.on .sp-leaf-l{transform-box:fill-box;transform-origin:100% 100%;animation:sp-leaf .55s cubic-bezier(.2,.9,.3,1.35) .9s both}
+.scr.on .sp-leaf-r{transform-box:fill-box;transform-origin:0% 100%;animation:sp-leaf .55s cubic-bezier(.2,.9,.3,1.35) 1.05s both}
+.scr.on .sp-rise{animation:sp-rise .6s ease-out 1.3s both}
+@keyframes sp-coin{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+@keyframes sp-draw{from{stroke-dashoffset:30}to{stroke-dashoffset:0}}
+@keyframes sp-leaf{from{opacity:0;transform:scale(0) rotate(-12deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes sp-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.scr.on .emi-ring{animation:ring 1.2s ease-out both}
+@keyframes ring{from{stroke-dasharray:0 999}}
+.scr.on .tm-bar{animation:grow 1s ease-out both}
+@keyframes grow{from{width:0}}
+.mp-pin{position:absolute;width:20px;height:20px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.mp-pin::after{content:"";position:absolute;inset:-3px;border-radius:50%;background:inherit;animation:halo 2.4s ease-out infinite;animation-delay:inherit}
+.mp-pin.sel{width:26px;height:26px;outline:3px solid #23206B}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:#16152B;color:#fff;padding:12px 18px;border-radius:14px;font-weight:600;z-index:80;transition:transform .3s;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="LH Microfinance home">
+      <span class="mark"><svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></span>
+      <span class="word">LH <b>Micro</b>finance</span>
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#customer" data-i18n="nav.customer"></a><a href="#staff" data-i18n="nav.staff"></a><a href="#map" data-i18n="nav.map"></a><a href="#how" data-i18n="nav.how"></a><a href="#download" data-i18n="nav.download"></a>
+    </nav>
+    <div class="seg" role="group" aria-label="Language">
+      <button data-lang="en" aria-pressed="true">EN</button><button data-lang="hi" aria-pressed="false" lang="hi">हि</button><button data-lang="gu" aria-pressed="false" lang="gu">ગુ</button>
+    </div>
+    <button class="iconbtn" id="theme" aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <a class="btn btn-gold btn-sm dl" href="#download" data-i18n="nav.dl"></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="ripple" viewBox="0 0 900 900" aria-hidden="true"><circle cx="450" cy="450" r="160"/><circle cx="450" cy="450" r="250"/><circle cx="450" cy="450" r="340"/><circle cx="450" cy="450" r="430"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><i></i><span data-i18n="hero.pill"></span></span>
+      <h1><span data-i18n="hero.t1" style="color:inherit"></span><br><span data-i18n="hero.t2"></span></h1>
+      <p class="hi" lang="hi">छोटा कर्ज़, पक्का भरोसा</p>
+      <p class="lede" data-i18n="hero.lede"></p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#download"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i18n="hero.cta1"></span></a>
+        <a class="btn btn-ghost" href="#staff" data-i18n="hero.cta2"></a>
+      </div>
+      <div class="trust"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9C6EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="hero.trust"></span></div>
+    </div>
+    <div class="stage">
+      <div class="float f1"><span class="ic" style="background:#E2F4EA"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b data-i18n="hero.f1t"></b><small data-i18n="hero.f1s"></small></span></div>
+      <div class="float f2"><span class="ic" style="background:#ECEBFA"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><span><b data-i18n="hero.f2t"></b><small data-i18n="hero.f2s"></small></span></div>
+      <div class="float f3"><span class="ic" style="background:#FDF1D3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A5A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><span><b data-i18n="hero.f3t"></b><small data-i18n="hero.f3s"></small></span></div>
+      <div class="phone" id="heroPhone" style="--s:.68"><div class="vp"><!-- Splash.dc.html -->
+<div class="scr on" data-scr="c1"><div style="width:390px;height:844px;background:#23206B;color:#F7F6FB;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:0 28px 40px;position:relative;overflow:hidden">
+  <svg class="sp-ripple" width="560" height="560" viewBox="0 0 560 560" aria-hidden="true" style="position:absolute;left:-85px;top:92px"><circle cx="280" cy="280" r="120" fill="none" stroke="#3B36A8" stroke-width="1.5" opacity=".55"/><circle cx="280" cy="280" r="180" fill="none" stroke="#3B36A8" stroke-width="1.5" opacity=".35"/><circle cx="280" cy="280" r="245" fill="none" stroke="#3B36A8" stroke-width="1.5" opacity=".2"/></svg>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative">
+    <svg width="148" height="148" viewBox="0 0 120 120" aria-hidden="true"><circle class="sp-coin" cx="60" cy="80" r="29" fill="#F2A900"/><circle class="sp-coin" cx="60" cy="80" r="20.5" fill="none" stroke="#C98A00" stroke-width="2.5"/><path class="sp-coin" d="M53 74h14M53 79h14M57.5 74c3 0 4.6 1.6 4.6 3.6s-1.6 3.6-4.6 3.6H53l8 8" fill="none" stroke="#8A5E00" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path class="sp-stem" d="M60 51V25" stroke="#F7F6FB" stroke-width="5" stroke-linecap="round" fill="none"/><path class="sp-leaf-l" d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path class="sp-leaf-r" d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg>
+    <div class="sp-rise" style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:38px;line-height:1.05;letter-spacing:-.5px;margin-top:18px;white-space:nowrap">LH <span style="color:#F2A900">Micro</span>finance</div>
+    <div class="sp-rise" style="font-size:18px;line-height:1.4;color:#D9D7F5;margin-top:14px;animation-delay:1.5s">Small loans that help you grow</div>
+    <div class="sp-rise" lang="hi" style="font-size:17px;line-height:1.4;color:#B6B3E8;margin-top:2px;animation-delay:1.65s">छोटा कर्ज़, पक्का भरोसा</div>
+  </div>
+  <div class="sp-rise" style="width:100%;display:flex;flex-direction:column;align-items:center;gap:16px;position:relative;animation-delay:2s">
+    <div style="width:100%;height:58px;border-radius:18px;background:#F2A900;color:#23206B;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center;gap:10px">Get started <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23206B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#C9C6EE"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9C6EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Registered NBFC-MFI. Your data stays in India.</div>
+  </div>
+</div></div>
+
+<!-- Login.dc.html (sign in state) -->
+<div class="scr" data-scr="c2"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column;padding:16px 24px 28px">
+  <div style="height:48px;display:flex;align-items:center"><span style="width:44px;height:44px;border-radius:22px;background:#fff;border:1.5px solid #E4E2F2;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23206B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span></div>
+  <div style="display:flex;align-items:center;gap:12px;margin-top:14px"><div style="width:56px;height:56px;border-radius:17px;background:#23206B;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 120 120"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></div><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:22px;color:#23206B">LH Microfinance</span></div>
+  <h1 style="margin:22px 0 0;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:32px;line-height:1.1">Welcome back</h1>
+  <p style="margin:8px 0 0;font-size:16px;line-height:1.5;color:#5E5C78">Sign in with the email you used to apply.</p>
+  <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#ECEBFA;padding:4px;border-radius:16px">
+    <div style="height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:8px;font:600 15px Mukta,sans-serif;background:#fff;color:#23206B;box-shadow:0 2px 8px rgba(35,32,107,.12)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3"/><path d="M10 17l5-5-5-5M15 12H4"/></svg>Sign in</div>
+    <div style="height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:8px;font:600 15px Mukta,sans-serif;color:#5E5C78"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8F8DA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M3 20c0-3.9 3.1-6 7-6M18 14v6M15 17h6"/></svg>Create account</div>
+  </div>
+  <div style="margin-top:18px;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600;color:#3A3856">Email address</span><div style="height:56px;border-radius:16px;border:1.5px solid #3B36A8;box-shadow:0 0 0 3px #DCDAF7;background:#fff;display:flex;align-items:center;gap:10px;padding:0 14px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" fill="#ECEBFA"/><path d="M4 7l8 6 8-6"/></svg><span class="typing" style="font:500 16px Mukta,sans-serif">sunita.pawar@gmail.com</span></div></div>
+    <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600;color:#3A3856">Password</span><div style="height:56px;border-radius:16px;border:1.5px solid #DCDAEE;background:#fff;display:flex;align-items:center;gap:10px;padding:0 6px 0 14px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" fill="#ECEBFA"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span style="flex:1;font:500 16px Mukta,sans-serif;letter-spacing:3px">•••••••••</span><span style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5E5C78" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></span></div></div>
+    <span style="align-self:flex-end;font-size:14px;font-weight:600;color:#3B36A8">Forgot password?</span>
+  </div>
+  <div style="flex:1"></div>
+  <div style="height:58px;border-radius:18px;background:#3B36A8;color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:19px">Sign in <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+  <div style="margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:#5E5C78"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>We email you a code. No phone number needed.</div>
+</div></div>
+
+<!-- Home.dc.html (active loan tab) -->
+<div class="scr" data-scr="c3"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column">
+  <div style="flex:1;overflow:hidden;display:flex;flex-direction:column">
+    <div style="background:#23206B;color:#F7F6FB;padding:18px 22px 92px;border-radius:0 0 30px 30px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:12px"><div style="width:44px;height:44px;border-radius:14px;background:#3B36A8;display:flex;align-items:center;justify-content:center"><svg width="34" height="34" viewBox="0 0 120 120"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></div><div><div style="font-size:14px;color:#C9C6EE;line-height:1.2">Namaste,</div><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:23px;line-height:1.15">Sunita Pawar</div></div></div>
+        <span style="position:relative;width:46px;height:46px;border-radius:23px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F7F6FB" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z" fill="rgba(255,255,255,0.18)"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span style="position:absolute;top:8px;right:9px;min-width:18px;height:18px;border-radius:9px;background:#F2A900;color:#23206B;font:700 11px Mukta,sans-serif;display:flex;align-items:center;justify-content:center;border:2px solid #23206B">2</span></span>
+      </div>
+    </div>
+    <div style="margin:-72px 18px 0;background:#fff;border-radius:26px;padding:20px;box-shadow:0 12px 32px rgba(35,32,107,.16);display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div><div style="font-size:15px;color:#5E5C78">Next payment</div><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:38px;line-height:1.05;margin-top:2px">₹2,837</div><div style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;font-weight:600;color:#8A5A00"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A5A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Due 5 Nov, in 21 days</div></div>
+        <div style="position:relative;width:104px;height:104px"><svg width="104" height="104" viewBox="0 0 104 104"><circle cx="52" cy="52" r="42" fill="none" stroke="#F1EFF9" stroke-width="11"/><circle class="emi-ring" cx="52" cy="52" r="42" fill="none" stroke="#F2A900" stroke-width="11" stroke-linecap="round" stroke-dasharray="66 999" transform="rotate(-90 52 52)"/></svg><div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center"><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:24px;line-height:1">3/12</div><div style="font-size:12px;color:#5E5C78;margin-top:2px">EMIs paid</div></div></div>
+      </div>
+      <div style="height:54px;border-radius:16px;background:#3B36A8;color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9.5 9h5M9.5 13h5"/></svg>Record a payment</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:22px 18px 6px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="#D6D3F6"/><path d="M12 8v8M8 12h8"/></svg></span><span style="font-size:13px;font-weight:600">New loan</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="#D6D3F6"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span style="font-size:13px;font-weight:600">Statement</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="#D6D3F6"/></svg></span><span style="font-size:13px;font-weight:600">Repay help</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z" fill="#D6D3F6"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg></span><span style="font-size:13px;font-weight:600">Talk to us</span></div>
+    </div>
+    <div style="padding:16px 18px 20px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#ECEBFA;padding:4px;border-radius:16px"><div style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:600 15px Mukta,sans-serif;background:#fff;color:#23206B;box-shadow:0 2px 8px rgba(35,32,107,.12)">Active loan</div><div style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:600 15px Mukta,sans-serif;color:#5E5C78">New application</div></div>
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:22px;padding:6px 18px">
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #EFEEF7"><span style="flex:1;font-size:15px;color:#5E5C78">Still to repay</span><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">₹25,326</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #EFEEF7"><span style="flex:1;font-size:15px;color:#5E5C78">Interest</span><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">23.5% a year</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 0"><span style="flex:1;font-size:15px;color:#5E5C78">Last EMI</span><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">5 Oct 2027</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="height:78px;background:#fff;border-top:1px solid #E4E2F2;display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:8px;font-size:12px;font-weight:600;color:#6B6987">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#23206B;font-weight:700"><span style="position:absolute;top:0;width:28px;height:4px;border-radius:0 0 4px 4px;background:#F2A900"></span><span style="width:52px;height:32px;border-radius:16px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5L12 3.5l8.5 7V20a1 1 0 0 1-1 1h-5v-6h-5v6h-5a1 1 0 0 1-1-1z" fill="#C9C5F2"/></svg></span>Home</div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B6987" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/></svg><span style="margin-top:4px">Loans</span></div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B6987" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 8h6M9 11h6M11 8c1.9 0 2.9 1.1 2.9 2.4S12.9 13 11 13H9l5 4"/></svg><span style="margin-top:4px">Pay</span></div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B6987" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span style="margin-top:4px">Account</span></div>
+  </div>
+</div></div>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap">
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" fill="#D6D3F6"/><path d="M4 7l8 6 8-6"/></svg></span><span><b data-i18n="strip.s1b"></b><small data-i18n="strip.s1s"></small></span></div>
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" fill="#D6D3F6"/><path d="M9.5 9h5M9.5 13h5"/></svg></span><span><b data-i18n="strip.s2b"></b><small data-i18n="strip.s2s"></small></span></div>
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z" fill="#D6D3F6"/></svg></span><span><b data-i18n="strip.s3b"></b><small data-i18n="strip.s3s"></small></span></div>
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z" fill="#D6D3F6"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span><b data-i18n="strip.s4b"></b><small data-i18n="strip.s4s"></small></span></div>
+</div></div>
+
+<section id="customer">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="cust.eyebrow"></span><h2 class="h2" data-i18n="cust.title"></h2><p class="sub" data-i18n="cust.sub"></p></div>
+    <div class="show" data-carousel>
+      <div class="steps" role="tablist">
+        <button class="step" role="tab" data-go="c1" aria-selected="true"><span class="n">1</span><span><h3 data-i18n="cust.c1t"></h3><p data-i18n="cust.c1p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="c2" aria-selected="false"><span class="n">2</span><span><h3 data-i18n="cust.c2t"></h3><p data-i18n="cust.c2p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="c3" aria-selected="false"><span class="n">3</span><span><h3 data-i18n="cust.c3t"></h3><p data-i18n="cust.c3p"></p></span><i class="bar"></i></button>
+      </div>
+      <div class="phone"><div class="vp"><!-- Splash.dc.html -->
+<div class="scr on" data-scr="c1"><div style="width:390px;height:844px;background:#23206B;color:#F7F6FB;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:0 28px 40px;position:relative;overflow:hidden">
+  <svg class="sp-ripple" width="560" height="560" viewBox="0 0 560 560" aria-hidden="true" style="position:absolute;left:-85px;top:92px"><circle cx="280" cy="280" r="120" fill="none" stroke="#3B36A8" stroke-width="1.5" opacity=".55"/><circle cx="280" cy="280" r="180" fill="none" stroke="#3B36A8" stroke-width="1.5" opacity=".35"/><circle cx="280" cy="280" r="245" fill="none" stroke="#3B36A8" stroke-width="1.5" opacity=".2"/></svg>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative">
+    <svg width="148" height="148" viewBox="0 0 120 120" aria-hidden="true"><circle class="sp-coin" cx="60" cy="80" r="29" fill="#F2A900"/><circle class="sp-coin" cx="60" cy="80" r="20.5" fill="none" stroke="#C98A00" stroke-width="2.5"/><path class="sp-coin" d="M53 74h14M53 79h14M57.5 74c3 0 4.6 1.6 4.6 3.6s-1.6 3.6-4.6 3.6H53l8 8" fill="none" stroke="#8A5E00" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path class="sp-stem" d="M60 51V25" stroke="#F7F6FB" stroke-width="5" stroke-linecap="round" fill="none"/><path class="sp-leaf-l" d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path class="sp-leaf-r" d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg>
+    <div class="sp-rise" style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:38px;line-height:1.05;letter-spacing:-.5px;margin-top:18px;white-space:nowrap">LH <span style="color:#F2A900">Micro</span>finance</div>
+    <div class="sp-rise" style="font-size:18px;line-height:1.4;color:#D9D7F5;margin-top:14px;animation-delay:1.5s">Small loans that help you grow</div>
+    <div class="sp-rise" lang="hi" style="font-size:17px;line-height:1.4;color:#B6B3E8;margin-top:2px;animation-delay:1.65s">छोटा कर्ज़, पक्का भरोसा</div>
+  </div>
+  <div class="sp-rise" style="width:100%;display:flex;flex-direction:column;align-items:center;gap:16px;position:relative;animation-delay:2s">
+    <div style="width:100%;height:58px;border-radius:18px;background:#F2A900;color:#23206B;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center;gap:10px">Get started <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23206B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#C9C6EE"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9C6EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Registered NBFC-MFI. Your data stays in India.</div>
+  </div>
+</div></div>
+
+<!-- Login.dc.html (sign in state) -->
+<div class="scr" data-scr="c2"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column;padding:16px 24px 28px">
+  <div style="height:48px;display:flex;align-items:center"><span style="width:44px;height:44px;border-radius:22px;background:#fff;border:1.5px solid #E4E2F2;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23206B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span></div>
+  <div style="display:flex;align-items:center;gap:12px;margin-top:14px"><div style="width:56px;height:56px;border-radius:17px;background:#23206B;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 120 120"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></div><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:22px;color:#23206B">LH Microfinance</span></div>
+  <h1 style="margin:22px 0 0;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:32px;line-height:1.1">Welcome back</h1>
+  <p style="margin:8px 0 0;font-size:16px;line-height:1.5;color:#5E5C78">Sign in with the email you used to apply.</p>
+  <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#ECEBFA;padding:4px;border-radius:16px">
+    <div style="height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:8px;font:600 15px Mukta,sans-serif;background:#fff;color:#23206B;box-shadow:0 2px 8px rgba(35,32,107,.12)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3"/><path d="M10 17l5-5-5-5M15 12H4"/></svg>Sign in</div>
+    <div style="height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:8px;font:600 15px Mukta,sans-serif;color:#5E5C78"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8F8DA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M3 20c0-3.9 3.1-6 7-6M18 14v6M15 17h6"/></svg>Create account</div>
+  </div>
+  <div style="margin-top:18px;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600;color:#3A3856">Email address</span><div style="height:56px;border-radius:16px;border:1.5px solid #3B36A8;box-shadow:0 0 0 3px #DCDAF7;background:#fff;display:flex;align-items:center;gap:10px;padding:0 14px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" fill="#ECEBFA"/><path d="M4 7l8 6 8-6"/></svg><span class="typing" style="font:500 16px Mukta,sans-serif">sunita.pawar@gmail.com</span></div></div>
+    <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600;color:#3A3856">Password</span><div style="height:56px;border-radius:16px;border:1.5px solid #DCDAEE;background:#fff;display:flex;align-items:center;gap:10px;padding:0 6px 0 14px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" fill="#ECEBFA"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span style="flex:1;font:500 16px Mukta,sans-serif;letter-spacing:3px">•••••••••</span><span style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5E5C78" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></span></div></div>
+    <span style="align-self:flex-end;font-size:14px;font-weight:600;color:#3B36A8">Forgot password?</span>
+  </div>
+  <div style="flex:1"></div>
+  <div style="height:58px;border-radius:18px;background:#3B36A8;color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:19px">Sign in <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+  <div style="margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:#5E5C78"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>We email you a code. No phone number needed.</div>
+</div></div>
+
+<!-- Home.dc.html (active loan tab) -->
+<div class="scr" data-scr="c3"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column">
+  <div style="flex:1;overflow:hidden;display:flex;flex-direction:column">
+    <div style="background:#23206B;color:#F7F6FB;padding:18px 22px 92px;border-radius:0 0 30px 30px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:12px"><div style="width:44px;height:44px;border-radius:14px;background:#3B36A8;display:flex;align-items:center;justify-content:center"><svg width="34" height="34" viewBox="0 0 120 120"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></div><div><div style="font-size:14px;color:#C9C6EE;line-height:1.2">Namaste,</div><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:23px;line-height:1.15">Sunita Pawar</div></div></div>
+        <span style="position:relative;width:46px;height:46px;border-radius:23px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F7F6FB" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z" fill="rgba(255,255,255,0.18)"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span style="position:absolute;top:8px;right:9px;min-width:18px;height:18px;border-radius:9px;background:#F2A900;color:#23206B;font:700 11px Mukta,sans-serif;display:flex;align-items:center;justify-content:center;border:2px solid #23206B">2</span></span>
+      </div>
+    </div>
+    <div style="margin:-72px 18px 0;background:#fff;border-radius:26px;padding:20px;box-shadow:0 12px 32px rgba(35,32,107,.16);display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div><div style="font-size:15px;color:#5E5C78">Next payment</div><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:38px;line-height:1.05;margin-top:2px">₹2,837</div><div style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;font-weight:600;color:#8A5A00"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A5A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Due 5 Nov, in 21 days</div></div>
+        <div style="position:relative;width:104px;height:104px"><svg width="104" height="104" viewBox="0 0 104 104"><circle cx="52" cy="52" r="42" fill="none" stroke="#F1EFF9" stroke-width="11"/><circle class="emi-ring" cx="52" cy="52" r="42" fill="none" stroke="#F2A900" stroke-width="11" stroke-linecap="round" stroke-dasharray="66 999" transform="rotate(-90 52 52)"/></svg><div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center"><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:24px;line-height:1">3/12</div><div style="font-size:12px;color:#5E5C78;margin-top:2px">EMIs paid</div></div></div>
+      </div>
+      <div style="height:54px;border-radius:16px;background:#3B36A8;color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9.5 9h5M9.5 13h5"/></svg>Record a payment</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:22px 18px 6px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="#D6D3F6"/><path d="M12 8v8M8 12h8"/></svg></span><span style="font-size:13px;font-weight:600">New loan</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="#D6D3F6"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span style="font-size:13px;font-weight:600">Statement</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="#D6D3F6"/></svg></span><span style="font-size:13px;font-weight:600">Repay help</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:58px;height:58px;border-radius:20px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z" fill="#D6D3F6"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg></span><span style="font-size:13px;font-weight:600">Talk to us</span></div>
+    </div>
+    <div style="padding:16px 18px 20px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#ECEBFA;padding:4px;border-radius:16px"><div style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:600 15px Mukta,sans-serif;background:#fff;color:#23206B;box-shadow:0 2px 8px rgba(35,32,107,.12)">Active loan</div><div style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:600 15px Mukta,sans-serif;color:#5E5C78">New application</div></div>
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:22px;padding:6px 18px">
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #EFEEF7"><span style="flex:1;font-size:15px;color:#5E5C78">Still to repay</span><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">₹25,326</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #EFEEF7"><span style="flex:1;font-size:15px;color:#5E5C78">Interest</span><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">23.5% a year</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 0"><span style="flex:1;font-size:15px;color:#5E5C78">Last EMI</span><span style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">5 Oct 2027</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="height:78px;background:#fff;border-top:1px solid #E4E2F2;display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:8px;font-size:12px;font-weight:600;color:#6B6987">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#23206B;font-weight:700"><span style="position:absolute;top:0;width:28px;height:4px;border-radius:0 0 4px 4px;background:#F2A900"></span><span style="width:52px;height:32px;border-radius:16px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5L12 3.5l8.5 7V20a1 1 0 0 1-1 1h-5v-6h-5v6h-5a1 1 0 0 1-1-1z" fill="#C9C5F2"/></svg></span>Home</div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B6987" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/></svg><span style="margin-top:4px">Loans</span></div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B6987" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 8h6M9 11h6M11 8c1.9 0 2.9 1.1 2.9 2.4S12.9 13 11 13H9l5 4"/></svg><span style="margin-top:4px">Pay</span></div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B6987" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span style="margin-top:4px">Account</span></div>
+  </div>
+</div></div>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="staff" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="staff.eyebrow"></span><h2 class="h2" data-i18n="staff.title"></h2><p class="sub" data-i18n="staff.sub"></p></div>
+    <div class="show rev" data-carousel>
+      <div class="phone"><div class="vp"><!-- FoHome.dc.html -->
+<div class="scr on" data-scr="s1"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column">
+  <div style="background:#23206B;color:#F7F6FB;padding:18px 20px 20px;border-radius:0 0 28px 28px;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:13px;background:#3B36A8;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 120 120"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></span><div style="flex:1"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px;color:#C9C6EE">Field officer, Hadapsar</span><span style="font-size:12px;font-weight:700;color:#F2A900;padding:2px 10px;border-radius:999px;border:1px solid rgba(242,169,0,.4)">Staff</span></div><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:22px;line-height:1.2">Good morning, Santosh</div></div></div>
+    <div style="display:flex;gap:10px"><div style="flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:12px 14px"><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:26px;line-height:1.1">₹18,400</div><div style="font-size:13px;color:#C9C6EE">to collect today</div></div><div style="flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:12px 14px"><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:26px;line-height:1.1">6</div><div style="font-size:13px;color:#C9C6EE">visits planned</div></div></div>
+  </div>
+  <div style="flex:1;padding:18px 20px;display:flex;flex-direction:column;gap:14px">
+    <div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:18px">Your tasks</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:10px"><span style="width:44px;height:44px;border-radius:14px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5" fill="#D6D3F6"/><path d="M3 10.5h18M7 15h3"/></svg></span><div><div style="font-weight:700;font-size:15px">Collections due</div><div style="font-size:13px;color:#5E5C78">9 EMIs, <span style="color:#A12C2C;font-weight:600">2 overdue</span></div></div></div>
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:10px"><span style="width:44px;height:44px;border-radius:14px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="#D6D3F6"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><div style="font-weight:700;font-size:15px">Field verifications</div><div style="font-size:13px;color:#5E5C78">3 visits to complete</div></div></div>
+    </div>
+    <div style="background:#3B36A8;color:#fff;border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:14px"><span style="width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9" fill="#F2A900"/><path d="M12 8v8M8 12h8" stroke="#23206B"/></svg></span><div style="flex:1"><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">Start a new lead</div><div style="font-size:14px;color:#D9D7F5">Help a customer apply</div></div></div>
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px 16px;display:flex;gap:12px"><span style="width:40px;height:40px;border-radius:12px;background:#E2F4EA;display:flex;align-items:center;justify-content:center;flex:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F7A50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><div><div style="font-weight:700;font-size:15px">Synced 4 min ago</div><div style="font-size:14px;line-height:1.5;color:#4A4866">Collections recorded offline upload automatically when you reconnect.</div></div></div>
+  </div>
+  <div style="height:78px;background:#fff;border-top:1px solid #E4E2F2;display:grid;grid-template-columns:repeat(4,1fr);font-size:12px;font-weight:600;color:#6B6987;text-align:center;align-items:center"><span style="color:#23206B;font-weight:700">● Home</span><span>Work</span><span>Collect</span><span>More</span></div>
+</div></div>
+
+<!-- AdmDevices.dc.html -->
+<div class="scr" data-scr="s2"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column">
+  <div style="display:flex;align-items:center;gap:10px;height:68px;padding:12px 20px 0"><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:26px">Devices</div><span style="font-size:12px;font-weight:700;background:#23206B;color:#F2A900;padding:3px 10px;border-radius:999px">Staff</span><span style="margin-left:auto;height:40px;padding:0 14px;border-radius:12px;background:#3B36A8;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>Map</span></div>
+  <div style="padding:10px 20px 0;display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;align-items:center;gap:10px;height:50px;padding:0 16px;border:1.5px solid #DCDAEE;border-radius:16px;background:#fff;color:#8F8DA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7" fill="#ECEBFA"/><path d="M20 20l-3.5-3.5"/></svg>Device ID or customer ref</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:#ECEBFA;border-radius:16px;padding:4px;font:600 14px Mukta,sans-serif;color:#5E5C78;text-align:center"><span style="height:40px;line-height:40px;border-radius:12px;background:#fff;color:#23206B">All</span><span style="height:40px;line-height:40px">Fresh</span><span style="height:40px;line-height:40px">Stale</span><span style="height:40px;line-height:40px">Withdrawn</span></div>
+  </div>
+  <div style="flex:1;padding:14px 20px;display:flex;flex-direction:column;gap:10px">
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;border-radius:14px;background:#ECEBFA;display:flex;align-items:center;justify-content:center;flex:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#D6D3F6"/></svg></span><div style="flex:1"><div style="display:flex;justify-content:space-between"><b style="font-size:15px;font-weight:600">DEV-7K2Q-91XF</b><span style="font-size:13px;font-weight:600;color:#145238;background:#E2F4EA;padding:3px 9px;border-radius:999px">● 12 min</span></div><div style="font-size:14px;color:#5E5C78">CUS-88213 · Redmi Note 13 · SIM ready</div></div></div>
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;border-radius:14px;background:#ECEBFA;display:flex;align-items:center;justify-content:center;flex:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#D6D3F6"/></svg></span><div style="flex:1"><div style="display:flex;justify-content:space-between"><b style="font-size:15px;font-weight:600">DEV-9P1D-77QW</b><span style="font-size:13px;font-weight:600;color:#5C3D00;background:#FDF1D3;padding:3px 9px;border-radius:999px">● 3 d · stale</span></div><div style="font-size:14px;color:#5E5C78">CUS-87512 · vivo Y28 · SIM absent (3d ago)</div></div></div>
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;border-radius:14px;background:#ECEBFA;display:flex;align-items:center;justify-content:center;flex:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#D6D3F6"/></svg></span><div style="flex:1"><div style="display:flex;justify-content:space-between"><b style="font-size:15px;font-weight:600">DEV-2H6T-58NB</b><span style="font-size:13px;font-weight:600;color:#4A4866;background:#EFEEF7;padding:3px 9px;border-radius:999px">● 11 d · uncertain</span></div><div style="font-size:14px;color:#5E5C78">CUS-86044 · realme C55 · SIM unknown</div></div></div>
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;border-radius:14px;background:#FBE5E5;display:flex;align-items:center;justify-content:center;flex:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A12C2C" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#F6CFCF"/><path d="M10 10l4 4M14 10l-4 4"/></svg></span><div style="flex:1"><div style="display:flex;justify-content:space-between"><b style="font-size:15px;font-weight:600">DEV-6R0K-12ZE</b><span style="font-size:13px;font-weight:600;color:#7A1F1F;background:#FBE5E5;padding:3px 9px;border-radius:999px">Withdrawn</span></div><div style="font-size:14px;color:#5E5C78">CUS-85511 · Moto G34 · consent withdrawn 9 Oct</div></div></div>
+    <div style="background:#ECEBFA;border-radius:20px;padding:14px 16px;font-size:14px;line-height:1.5;color:#23206B">Status is best-effort. "Absent" or "uncertain" can mean the phone was off or Android didn't report — confirm before acting.</div>
+  </div>
+  <div style="height:78px;background:#fff;border-top:1px solid #E4E2F2;display:grid;grid-template-columns:repeat(4,1fr);font-size:12px;font-weight:600;color:#6B6987;text-align:center;align-items:center"><span>Home</span><span>Work</span><span style="color:#23206B;font-weight:700">● Devices</span><span>More</span></div>
+</div></div>
+
+<!-- AdmDeviceDetail.dc.html -->
+<div class="scr" data-scr="s3"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column">
+  <div style="display:flex;align-items:center;gap:12px;height:68px;padding:12px 20px 0"><span style="width:44px;height:44px;border-radius:22px;background:#fff;border:1.5px solid #E4E2F2;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23206B" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></span><div style="font-weight:700;font-size:19px;letter-spacing:.3px">DEV-7K2Q-91XF</div></div>
+  <div style="flex:1;padding:14px 20px;display:flex;flex-direction:column;gap:14px">
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:22px;padding:4px 16px;font-size:15px">
+      <div style="display:flex;padding:12px 0"><span style="flex:1;color:#5E5C78">Customer</span><b style="font-weight:600">CUS-88213</b></div>
+      <div style="display:flex;padding:12px 0;border-top:1px solid #EFEEF7"><span style="flex:1;color:#5E5C78">Phone</span><b style="font-weight:600">Redmi Note 13 · A14</b></div>
+      <div style="display:flex;padding:12px 0;border-top:1px solid #EFEEF7"><span style="flex:1;color:#5E5C78">Last check-in</span><span style="font-size:13px;font-weight:600;color:#145238;background:#E2F4EA;padding:3px 10px;border-radius:999px">12 min · fresh</span></div>
+      <div style="display:flex;padding:12px 0;border-top:1px solid #EFEEF7"><span style="flex:1;color:#5E5C78">SIM (best-effort)</span><b style="font-weight:600">Ready</b></div>
+      <div style="display:flex;padding:12px 0;border-top:1px solid #EFEEF7"><span style="flex:1;color:#5E5C78">Management mode</span><b style="font-weight:600">Standard app install</b></div>
+    </div>
+    <div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">Actions you can take</div>
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:22px;overflow:hidden">
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 16px"><span style="width:42px;height:42px;border-radius:14px;background:#ECEBFA;flex:none"></span><span><b style="display:block;font-size:16px">Send reminder / message</b><span style="font-size:14px;color:#5E5C78">A notification the customer can read</span></span></div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-top:1px solid #EFEEF7"><span style="width:42px;height:42px;border-radius:14px;background:#ECEBFA;flex:none"></span><span><b style="display:block;font-size:16px">View telemetry &amp; location</b><span style="font-size:14px;color:#5E5C78">Battery, network, map · logged</span></span></div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-top:1px solid #EFEEF7"><span style="width:42px;height:42px;border-radius:14px;background:#FDF1D3;flex:none"></span><span><b style="display:block;font-size:16px">Request location access</b><span style="font-size:14px;color:#5E5C78">Needs approval · 24 h · logged</span></span></div>
+    </div>
+    <div style="background:#ECEBFA;border-radius:20px;padding:14px 16px;font-size:14px;line-height:1.5;color:#23206B">Remote lock, wipe and SIM block are <b>not available</b> on a standard install and are never used to enforce repayment.</div>
+  </div>
+</div></div>
+
+<!-- NEW: Device map -->
+<div class="scr" data-scr="s4"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column;position:relative">
+  <div style="display:flex;align-items:center;gap:12px;height:68px;padding:12px 20px 0;background:#F7F6FB;z-index:2"><span style="width:44px;height:44px;border-radius:22px;background:#fff;border:1.5px solid #E4E2F2;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23206B" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></span><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:24px;flex:1">Device map</div><span style="font-size:13px;font-weight:700;color:#145238;background:#E2F4EA;padding:4px 10px;border-radius:999px">● 14 live</span></div>
+  <div style="padding:10px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#F7F6FB;z-index:2"><div style="display:contents;font:600 14px Mukta,sans-serif"><span style="height:40px;line-height:40px;text-align:center;border-radius:12px;background:#fff;color:#23206B;box-shadow:0 1px 3px rgba(35,32,107,.15)">All 18</span><span style="height:40px;line-height:40px;text-align:center;border-radius:12px;background:#ECEBFA;color:#5E5C78">Fresh 14</span><span style="height:40px;line-height:40px;text-align:center;border-radius:12px;background:#ECEBFA;color:#5E5C78">Stale 4</span></div></div>
+  <div style="flex:1;position:relative;overflow:hidden;background:#E8E6F4">
+    <svg width="390" height="600" viewBox="0 0 390 600" style="position:absolute;inset:0" aria-hidden="true">
+      <rect width="390" height="600" fill="#EEF0E8"/>
+      <path d="M-10 180 C80 160 120 230 210 210 S330 140 400 170" stroke="#A9CBE8" stroke-width="16" fill="none"/>
+      <path d="M-10 420 C90 380 170 450 260 400 S360 360 400 380" stroke="#A9CBE8" stroke-width="10" fill="none"/>
+      <g stroke="#fff" stroke-width="9" fill="none"><path d="M0 300H390"/><path d="M190 0V600"/><path d="M0 80L390 520"/><path d="M40 600L330 0"/></g>
+      <g stroke="#F6D88B" stroke-width="5" fill="none"><path d="M0 300H390"/><path d="M40 600L330 0"/></g>
+      <g fill="#DDE8D2"><rect x="250" y="440" width="90" height="70" rx="10"/><rect x="30" y="40" width="80" height="60" rx="10"/></g>
+    </svg>
+    <div class="mp-pin" style="left:150px;top:210px;background:#1F8A5B"></div>
+    <div class="mp-pin" style="left:240px;top:150px;background:#1F8A5B;animation-delay:.6s"></div>
+    <div class="mp-pin" style="left:90px;top:330px;background:#F2A900;animation-delay:1.2s"></div>
+    <div class="mp-pin" style="left:280px;top:300px;background:#1F8A5B;animation-delay:.3s"></div>
+    <div class="mp-pin sel" style="left:200px;top:270px;background:#1F8A5B"></div>
+    <div style="position:absolute;left:16px;right:16px;bottom:16px;background:#fff;border-radius:24px;padding:16px;box-shadow:0 12px 32px rgba(35,32,107,.22)">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;border-radius:14px;background:#ECEBFA;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#D6D3F6"/></svg></span><div style="flex:1"><b style="font-size:16px">Sunita Pawar</b><div style="font-size:14px;color:#5E5C78">vivo Y28 · Hadapsar, Pune</div></div><span style="font-size:13px;font-weight:600;color:#145238;background:#E2F4EA;padding:3px 9px;border-radius:999px">8 min</span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;text-align:center"><div style="background:#F7F6FB;border-radius:14px;padding:8px"><div style="font-size:12px;color:#5E5C78">Battery</div><b style="font-family:'Baloo 2',sans-serif;font-size:18px">82%</b></div><div style="background:#F7F6FB;border-radius:14px;padding:8px"><div style="font-size:12px;color:#5E5C78">Network</div><b style="font-family:'Baloo 2',sans-serif;font-size:18px">4G</b></div><div style="background:#F7F6FB;border-radius:14px;padding:8px"><div style="font-size:12px;color:#5E5C78">Accuracy</div><b style="font-family:'Baloo 2',sans-serif;font-size:18px">±12 m</b></div></div>
+      <div style="margin-top:12px;height:48px;border-radius:14px;background:#3B36A8;color:#fff;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center">View telemetry</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- NEW: Device telemetry -->
+<div class="scr" data-scr="s5"><div style="width:390px;height:844px;background:#F7F6FB;color:#16152B;font-family:'Mukta',system-ui,sans-serif;display:flex;flex-direction:column">
+  <div style="display:flex;align-items:center;gap:12px;height:68px;padding:12px 20px 0"><span style="width:44px;height:44px;border-radius:22px;background:#fff;border:1.5px solid #E4E2F2;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23206B" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></span><div style="flex:1"><div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:21px;line-height:1.1">Device telemetry</div><div style="font-size:13px;color:#5E5C78">Sunita Pawar · vivo Y28</div></div></div>
+  <div style="flex:1;padding:14px 20px;display:flex;flex-direction:column;gap:12px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px"><div style="font-size:13px;color:#5E5C78">Battery</div><b style="font-family:'Baloo 2',sans-serif;font-size:26px;line-height:1.1">82%</b><div style="height:7px;border-radius:4px;background:#E4E2F2;margin-top:6px"><div class="tm-bar" style="width:82%;height:100%;border-radius:4px;background:#1F8A5B"></div></div><div style="font-size:12px;color:#5E5C78;margin-top:4px">Charging</div></div>
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px"><div style="font-size:13px;color:#5E5C78">Network</div><b style="font-family:'Baloo 2',sans-serif;font-size:26px;line-height:1.1">4G</b><div style="font-size:12px;color:#5E5C78;margin-top:10px">SIM ready</div></div>
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px"><div style="font-size:13px;color:#5E5C78">Storage free</div><b style="font-family:'Baloo 2',sans-serif;font-size:22px;line-height:1.1">11.4 GB</b><div style="height:7px;border-radius:4px;background:#E4E2F2;margin-top:6px"><div class="tm-bar" style="width:18%;height:100%;border-radius:4px;background:#3B36A8"></div></div></div>
+      <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:14px"><div style="font-size:13px;color:#5E5C78">RAM free</div><b style="font-family:'Baloo 2',sans-serif;font-size:22px;line-height:1.1">1.8 GB</b><div style="height:7px;border-radius:4px;background:#E4E2F2;margin-top:6px"><div class="tm-bar" style="width:45%;height:100%;border-radius:4px;background:#3B36A8"></div></div></div>
+    </div>
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;overflow:hidden"><div style="height:120px;background:linear-gradient(135deg,#EEF0E8,#E3E8DA);position:relative"><div class="mp-pin sel" style="left:180px;top:48px;background:#1F8A5B"></div></div><div style="padding:12px 16px;font-size:14px;display:flex;justify-content:space-between"><span style="color:#5E5C78">18.5089, 73.9260 · ±12 m</span><b style="color:#3B36A8">Open map</b></div></div>
+    <div style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px">Recent check-ins</div>
+    <div style="background:#fff;border:1px solid #E4E2F2;border-radius:20px;padding:2px 16px;font-size:14px">
+      <div style="display:flex;justify-content:space-between;padding:10px 0"><span>Today 11:42</span><span style="color:#5E5C78">82% · 4G · ±12 m</span></div>
+      <div style="display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid #EFEEF7"><span>Today 11:27</span><span style="color:#5E5C78">80% · 4G · ±15 m</span></div>
+      <div style="display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid #EFEEF7"><span>Today 11:12</span><span style="color:#5E5C78">78% · Wi-Fi · ±30 m</span></div>
+      <div style="display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid #EFEEF7"><span>Today 10:57</span><span style="color:#5E5C78">77% · Wi-Fi · no fix</span></div>
+    </div>
+    <div style="font-size:13px;color:#5E5C78;display:flex;gap:6px;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5E5C78" stroke-width="2"><path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg>Your view was recorded in the audit log.</div>
+  </div>
+</div></div>
+</div></div>
+      <div class="steps" role="tablist">
+        <button class="step" role="tab" data-go="s1" aria-selected="true"><span class="n">1</span><span><h3 data-i18n="staff.s1t"></h3><p data-i18n="staff.s1p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s2" aria-selected="false"><span class="n">2</span><span><h3 data-i18n="staff.s2t"></h3><p data-i18n="staff.s2p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s3" aria-selected="false"><span class="n">3</span><span><h3 data-i18n="staff.s3t"></h3><p data-i18n="staff.s3p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s4" aria-selected="false"><span class="n">4</span><span><h3><span data-i18n="staff.s4t"></span><span class="new">New</span></h3><p data-i18n="staff.s4p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s5" aria-selected="false"><span class="n">5</span><span><h3><span data-i18n="staff.s5t"></span><span class="new">New</span></h3><p data-i18n="staff.s5p"></p></span><i class="bar"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map" class="mapsec">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="map.eyebrow"></span><h2 class="h2" data-i18n="map.title"></h2><p class="sub" data-i18n="map.sub"></p></div>
+    <div class="mapgrid">
+      <div class="mapcard">
+        <div class="maphead">
+          <span class="live" data-i18n="map.live"></span>
+          <div class="filters" role="group" aria-label="Filter">
+            <button data-f="all" aria-pressed="true" data-i18n="map.all"></button><button data-f="fresh" aria-pressed="false" data-i18n="map.fresh"></button><button data-f="stale" aria-pressed="false" data-i18n="map.stale"></button><button data-f="off" aria-pressed="false" data-i18n="map.off"></button>
+          </div>
+        </div>
+        <div class="maptools">
+          <form id="search"><input id="q" type="search" autocomplete="off" data-i18n-ph="map.search" aria-label="Search"><button class="mt-go" type="submit" data-i18n="map.go"></button></form>
+          <button class="mt-me" id="me" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span data-i18n="map.me"></span></button>
+          <button class="mt-in" id="india" type="button" data-i18n="map.india"></button>
+        </div>
+        <div style="position:relative"><div id="lhmap" role="application" aria-label="Map of India"></div><div class="maperr" id="maperr"><div><p data-i18n="map.tiles"></p><p style="margin-top:8px"><a href="https://yadav0141.github.io/marketing/#map" target="_blank" rel="noopener" data-i18n="map.tilesLink"></a></p></div></div></div>
+        <div class="legend"><span><i style="background:#1F8A5B"></i><span data-i18n="map.lgFresh"></span></span><span><i style="background:#F2A900"></i><span data-i18n="map.lgStale"></span></span><span><i style="background:#8F8DA8"></i><span data-i18n="map.lgOff"></span></span><span><i style="background:#3B82F6"></i><span data-i18n="map.lgMe"></span></span></div>
+      </div>
+      <div class="side">
+        <div class="dev" id="dev" aria-live="polite"></div>
+        <div class="devlist" id="devlist"></div>
+        <div class="consent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="map.consentNote"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="how.eyebrow"></span><h2 class="h2" data-i18n="how.title"></h2></div>
+    <div class="tabs" role="tablist"><button role="tab" data-lane="lc" aria-selected="true" data-i18n="how.tabC"></button><button role="tab" data-lane="ls" aria-selected="false" data-i18n="how.tabS"></button></div>
+    <div class="lane reveal" id="lc">
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span><h3 data-i18n="how.c1t"></h3><p data-i18n="how.c1p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="#D6D3F6"/><path d="M14 3v5h5"/></svg></span><h3 data-i18n="how.c2t"></h3><p data-i18n="how.c2p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5" fill="#D6D3F6"/><path d="M3 10.5h18M7 15h3"/></svg></span><h3 data-i18n="how.c3t"></h3><p data-i18n="how.c3p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" fill="#D6D3F6"/><path d="M9.5 9h5M9.5 13h5"/></svg></span><h3 data-i18n="how.c4t"></h3><p data-i18n="how.c4p"></p></div>
+    </div>
+    <div class="lane" id="ls" hidden>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9" fill="#D6D3F6"/><path d="M12 8v8M8 12h8"/></svg></span><h3 data-i18n="how.s1t"></h3><p data-i18n="how.s1p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="#D6D3F6"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3 data-i18n="how.s2t"></h3><p data-i18n="how.s2p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" fill="#D6D3F6"/><path d="M9 12l2 2 4-4"/></svg></span><h3 data-i18n="how.s3t"></h3><p data-i18n="how.s3p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z" fill="#D6D3F6"/><path d="M9 4v14M15 6v14"/></svg></span><h3 data-i18n="how.s4t"></h3><p data-i18n="how.s4p"></p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="trust.eyebrow"></span><h2 class="h2" data-i18n="trust.title"></h2></div>
+    <div class="tgrid">
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" fill="#D6D3F6"/><path d="M9 12l2 2 4-4"/></svg></span><h3 data-i18n="trust.t1t"></h3><p data-i18n="trust.t1p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" fill="#D6D3F6"/><circle cx="12" cy="12" r="2.8"/></svg></span><h3 data-i18n="trust.t2t"></h3><p data-i18n="trust.t2p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#D6D3F6"/><path d="M11 18h2"/></svg></span><h3 data-i18n="trust.t3t"></h3><p data-i18n="trust.t3p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" fill="#D6D3F6"/><path d="M4 7l8 6 8-6"/></svg></span><h3 data-i18n="trust.t4t"></h3><p data-i18n="trust.t4p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><h3 data-i18n="trust.t5t"></h3><p data-i18n="trust.t5p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="#D6D3F6"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></span><h3 data-i18n="trust.t6t"></h3><p data-i18n="trust.t6p"></p></div>
+    </div>
+  </div>
+</section>
+
+<div class="dlsec" id="download"><div class="wrap">
+  <div class="dlcard reveal">
+    <div>
+      <h2 data-i18n="dl.title"></h2>
+      <p data-i18n="dl.sub"></p>
+      <div class="facts"><span data-i18n="dl.f1"></span><span data-i18n="dl.f2"></span><span data-i18n="dl.f3"></span><span data-i18n="dl.f4"></span></div>
+      <ol class="install"><li data-i18n="dl.i1"></li><li data-i18n="dl.i2"></li><li data-i18n="dl.i3"></li></ol>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
+        <a class="btn btn-gold" id="apk" href="https://github.com/Yadav0141/marketing/releases/latest/download/lh-microfinance-customer.apk" target="_blank" rel="noopener" download><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i18n="dl.btn"></span></a>
+        <button class="btn btn-ghost" id="copy" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Link</button>
+      </div>
+    </div>
+    <div class="qrbox"><div id="qr" role="img" aria-label="QR code for the APK download"></div><small data-i18n="dl.qr"></small></div>
+  </div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><span class="mark" style="width:36px;height:36px;border-radius:12px"><svg width="26" height="26" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></span><span class="word" style="color:#fff;font-size:19px">LH <b>Micro</b>finance</span></div>
+  <span data-i18n="foot.rights"></span>
+</div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const I18N = {"en":{"nav":{"customer":"Customer app","staff":"Staff app","map":"Device map","how":"How it works","download":"Download","dl":"Get the app"},"hero":{"pill":"Now on Android · v1.1.0","t1":"Small loans that","t2":"help you grow","lede":"Apply, track your EMIs and pay by UPI from your phone. Field officers stay with you at every step, in your language.","cta1":"Download the app","cta2":"See the staff app","trust":"Registered NBFC-MFI. Your data stays in India.","f1t":"EMI received","f1s":"₹2,837 · via UPI","f2t":"Synced 4 min ago","f2s":"Field officer app","f3t":"3 of 12 EMIs paid","f3s":"Next due 5 Nov"},"strip":{"s1b":"Sign in with email","s1s":"We email you a code. No phone number needed.","s2b":"Pay by UPI","s2s":"Record an EMI in seconds","s3b":"हिंदी · ગુજરાતી · English","s3s":"Use the app in your language","s4b":"Data stays in India","s4s":"Registered NBFC-MFI"},"cust":{"eyebrow":"Customer app","title":"Your loan, in your pocket","sub":"Every screen below is from the LH Microfinance app. Tap a step to see it on the phone.","c1t":"A warm welcome","c1p":"Open the app and pick your language. No forms on the first screen.","c2t":"Sign in with email","c2p":"Sign in or create an account with just your name, email and a password.","c3t":"Your loan at a glance","c3p":"Next payment, EMIs paid, what is left to repay, and one tap to record a payment."},"staff":{"eyebrow":"Staff app","title":"Built for the field and the branch","sub":"Field officers plan visits and collections. Branch staff see each customer's device health and, with consent, where it last checked in.","s1t":"Field officer's day","s1p":"Money to collect, visits planned, and offline collections that sync later.","s2t":"Device registry","s2p":"Every registered phone with a fresh, stale or withdrawn status.","s3t":"Device detail","s3p":"Phone model, last check-in, SIM state and the actions staff can take.","s4t":"Devices on a map","s4p":"Where each consenting customer's phone last checked in, on a live map.","s5t":"Device telemetry","s5p":"Battery, network, location accuracy and sync history for one phone."},"map":{"eyebrow":"Live device map","title":"Every device, anywhere in India","sub":"A real map you can pan and zoom anywhere in the country. Search a place or show your own location. Pins are sample devices; real customer data stays in the signed-in staff app.","search":"Search a city, area or PIN code","go":"Search","me":"My location","india":"All India","live":"Live","all":"All","fresh":"Fresh","stale":"Stale","off":"Location off","lgFresh":"Checked in < 1 h","lgStale":"No check-in > 24 h","lgOff":"Location declined","lgMe":"You","battery":"Battery","network":"Network","seen":"Last check-in","acc":"Accuracy","phone":"Phone","app":"App","sim":"SIM","loan":"Loan","consent":"Location consent","given":"Given","declined":"Declined","none":"Not shared","consentNote":"Location is shown only for customers who opted in. Staff must request access, and every view is logged.","meHere":"You are here","meDenied":"Location permission was denied in your browser.","meNo":"Your browser can't share location.","notFound":"No place found for that search.","searching":"Searching…","tiles":"Map tiles can't load in this preview.","tilesLink":"Open the live website"},"how":{"eyebrow":"How it works","title":"From application to last EMI","tabC":"For customers","tabS":"For staff","c1t":"Download and sign in","c1p":"Install the app, choose your language and sign in with your email.","c2t":"Apply and upload KYC","c2p":"Pick a loan, add your details and photos of your documents.","c3t":"Get your money","c3p":"After a short field visit, the money is sent to your bank account.","c4t":"Pay EMIs by UPI","c4p":"Get reminders before each due date and pay in a few taps.","s1t":"Start a lead","s1p":"Help a customer apply on their own phone or yours.","s2t":"Verify in the field","s2p":"Visit, check documents and record notes, even offline.","s3t":"Approve and disburse","s3p":"Maker-checker approvals with a full audit trail.","s4t":"Collect and monitor","s4p":"Track collections and device check-ins on the map."},"trust":{"eyebrow":"Trust and privacy","title":"Fair lending, done carefully","t1t":"Consent first","t1p":"Location is optional. Customers can say no, and can withdraw consent at any time.","t2t":"Every view is logged","t2p":"Staff access to a device is recorded: who looked, when and why.","t3t":"No phone lock-outs","t3p":"A standard install can't lock, wipe or block the customer's phone.","t4t":"Email sign-in codes","t4p":"Secure sign-in without sharing a phone number.","t5t":"Works offline","t5p":"Field collections are saved on the phone and sync when back online.","t6t":"Data stays in India","t6p":"Hosted in India by a registered NBFC-MFI."},"dl":{"title":"Get LH Microfinance on your phone","sub":"Download the Android app directly. It's free and takes about a minute to install.","f1":"Version 1.1.0","f2":"Android 6.0 and above","f3":"About 38 MB","f4":"Free","i1":"Tap Download APK below.","i2":"When asked, allow installs from your browser.","i3":"Open LH Microfinance and choose your language.","btn":"Download APK","qr":"Scan with your phone camera to download","copied":"Download link copied"},"foot":{"rights":"© 2026 LH Microfinance. Registered NBFC-MFI.","privacy":"Privacy","support":"Support"}},"hi":{"nav":{"customer":"ग्राहक ऐप","staff":"स्टाफ ऐप","map":"डिवाइस मैप","how":"कैसे काम करता है","download":"डाउनलोड","dl":"ऐप पाएं"},"hero":{"pill":"अब Android पर · v1.1.0","t1":"छोटे कर्ज़ जो","t2":"आपको आगे बढ़ाएं","lede":"अपने फ़ोन से आवेदन करें, EMI देखें और UPI से भुगतान करें। हर कदम पर फ़ील्ड अधिकारी आपके साथ, आपकी भाषा में।","cta1":"ऐप डाउनलोड करें","cta2":"स्टाफ ऐप देखें","trust":"पंजीकृत NBFC-MFI। आपका डेटा भारत में ही रहता है।","f1t":"EMI मिल गई","f1s":"₹2,837 · UPI से","f2t":"4 मिनट पहले सिंक","f2s":"फ़ील्ड अधिकारी ऐप","f3t":"12 में से 3 EMI भरी","f3s":"अगली किस्त 5 नवंबर"},"strip":{"s1b":"ईमेल से साइन इन","s1s":"हम आपको ईमेल पर कोड भेजते हैं। फ़ोन नंबर की ज़रूरत नहीं।","s2b":"UPI से भुगतान","s2s":"कुछ ही सेकंड में EMI दर्ज करें","s3b":"हिंदी · ગુજરાતી · English","s3s":"अपनी भाषा में ऐप चलाएं","s4b":"डेटा भारत में","s4s":"पंजीकृत NBFC-MFI"},"cust":{"eyebrow":"ग्राहक ऐप","title":"आपका लोन, आपकी जेब में","sub":"नीचे की हर स्क्रीन LH Microfinance ऐप से है। फ़ोन पर देखने के लिए किसी कदम पर टैप करें।","c1t":"प्यार भरा स्वागत","c1p":"ऐप खोलें और अपनी भाषा चुनें। पहली स्क्रीन पर कोई फ़ॉर्म नहीं।","c2t":"ईमेल से साइन इन","c2p":"सिर्फ़ नाम, ईमेल और पासवर्ड से साइन इन करें या खाता बनाएं।","c3t":"एक नज़र में आपका लोन","c3p":"अगला भुगतान, भरी गई EMI, बाकी रकम, और एक टैप में भुगतान दर्ज करें।"},"staff":{"eyebrow":"स्टाफ ऐप","title":"फ़ील्ड और शाखा, दोनों के लिए","sub":"फ़ील्ड अधिकारी विज़िट और वसूली की योजना बनाते हैं। शाखा स्टाफ हर ग्राहक के डिवाइस की स्थिति देखता है और सहमति होने पर उसकी आख़िरी लोकेशन भी।","s1t":"फ़ील्ड अधिकारी का दिन","s1p":"वसूली की रकम, तय विज़िट, और ऑफ़लाइन वसूली जो बाद में सिंक होती है।","s2t":"डिवाइस रजिस्टर","s2p":"हर पंजीकृत फ़ोन, ताज़ा, पुराना या हटाया गया स्टेटस के साथ।","s3t":"डिवाइस विवरण","s3p":"फ़ोन मॉडल, आख़िरी चेक-इन, SIM स्थिति और स्टाफ के विकल्प।","s4t":"मैप पर डिवाइस","s4p":"सहमति देने वाले ग्राहकों के फ़ोन ने आख़िरी बार कहाँ चेक-इन किया, लाइव मैप पर।","s5t":"डिवाइस टेलीमेट्री","s5p":"एक फ़ोन की बैटरी, नेटवर्क, लोकेशन सटीकता और सिंक इतिहास।"},"map":{"eyebrow":"लाइव डिवाइस मैप","title":"हर डिवाइस, भारत में कहीं भी","sub":"असली मैप, जिसे आप देश में कहीं भी खिसका और ज़ूम कर सकते हैं। कोई जगह खोजें या अपनी लोकेशन देखें। पिन नमूना डिवाइस हैं; असली ग्राहक डेटा सिर्फ़ साइन-इन स्टाफ ऐप में रहता है।","search":"शहर, इलाका या पिन कोड खोजें","go":"खोजें","me":"मेरी लोकेशन","india":"पूरा भारत","live":"लाइव","all":"सभी","fresh":"ताज़ा","stale":"पुराना","off":"लोकेशन बंद","lgFresh":"1 घंटे के अंदर चेक-इन","lgStale":"24 घंटे से चेक-इन नहीं","lgOff":"लोकेशन मना की","lgMe":"आप","battery":"बैटरी","network":"नेटवर्क","seen":"आख़िरी चेक-इन","acc":"सटीकता","phone":"फ़ोन","app":"ऐप","sim":"SIM","loan":"लोन","consent":"लोकेशन सहमति","given":"दी गई","declined":"मना की","none":"साझा नहीं","consentNote":"लोकेशन सिर्फ़ उन ग्राहकों की दिखती है जिन्होंने सहमति दी है। स्टाफ को अनुमति माँगनी होती है और हर बार देखना दर्ज होता है।","meHere":"आप यहाँ हैं","meDenied":"आपके ब्राउज़र में लोकेशन अनुमति मना कर दी गई।","meNo":"आपका ब्राउज़र लोकेशन साझा नहीं कर सकता।","notFound":"इस खोज के लिए कोई जगह नहीं मिली।","searching":"खोज रहे हैं…","tiles":"इस प्रीव्यू में मैप लोड नहीं हो सकता।","tilesLink":"लाइव वेबसाइट खोलें"},"how":{"eyebrow":"कैसे काम करता है","title":"आवेदन से आख़िरी EMI तक","tabC":"ग्राहकों के लिए","tabS":"स्टाफ के लिए","c1t":"डाउनलोड करें और साइन इन","c1p":"ऐप इंस्टॉल करें, भाषा चुनें और ईमेल से साइन इन करें।","c2t":"आवेदन और KYC","c2p":"लोन चुनें, अपनी जानकारी और दस्तावेज़ों की फ़ोटो जोड़ें।","c3t":"पैसा पाएं","c3p":"छोटी सी फ़ील्ड विज़िट के बाद पैसा आपके बैंक खाते में भेजा जाता है।","c4t":"UPI से EMI भरें","c4p":"हर किस्त से पहले रिमाइंडर पाएं और कुछ टैप में भुगतान करें।","s1t":"लीड शुरू करें","s1p":"ग्राहक को उसके या अपने फ़ोन पर आवेदन में मदद करें।","s2t":"फ़ील्ड में जाँच","s2p":"विज़िट करें, दस्तावेज़ जाँचें और नोट दर्ज करें, ऑफ़लाइन भी।","s3t":"मंज़ूरी और वितरण","s3p":"मेकर-चेकर मंज़ूरी, पूरे ऑडिट रिकॉर्ड के साथ।","s4t":"वसूली और निगरानी","s4p":"मैप पर वसूली और डिवाइस चेक-इन देखें।"},"trust":{"eyebrow":"भरोसा और निजता","title":"निष्पक्ष ऋण, पूरी सावधानी से","t1t":"पहले सहमति","t1p":"लोकेशन वैकल्पिक है। ग्राहक मना कर सकते हैं और कभी भी सहमति वापस ले सकते हैं।","t2t":"हर बार देखना दर्ज","t2p":"डिवाइस देखने का रिकॉर्ड रहता है: किसने, कब और क्यों।","t3t":"फ़ोन लॉक नहीं होता","t3p":"सामान्य इंस्टॉल ग्राहक का फ़ोन लॉक, वाइप या ब्लॉक नहीं कर सकता।","t4t":"ईमेल कोड से साइन इन","t4p":"फ़ोन नंबर दिए बिना सुरक्षित साइन इन।","t5t":"ऑफ़लाइन भी चलता है","t5p":"फ़ील्ड वसूली फ़ोन में सेव होती है और नेटवर्क आने पर सिंक होती है।","t6t":"डेटा भारत में","t6p":"पंजीकृत NBFC-MFI द्वारा भारत में होस्ट।"},"dl":{"title":"LH Microfinance अपने फ़ोन पर पाएं","sub":"Android ऐप सीधे डाउनलोड करें। यह मुफ़्त है और इंस्टॉल होने में लगभग एक मिनट लगता है।","f1":"वर्शन 1.1.0","f2":"Android 6.0 और ऊपर","f3":"लगभग 38 MB","f4":"मुफ़्त","i1":"नीचे APK डाउनलोड करें पर टैप करें।","i2":"पूछे जाने पर अपने ब्राउज़र से इंस्टॉल की अनुमति दें।","i3":"LH Microfinance खोलें और अपनी भाषा चुनें।","btn":"APK डाउनलोड करें","qr":"डाउनलोड के लिए फ़ोन कैमरे से स्कैन करें","copied":"डाउनलोड लिंक कॉपी हो गया"},"foot":{"rights":"© 2026 LH Microfinance. पंजीकृत NBFC-MFI।","privacy":"निजता","support":"सहायता"}},"gu":{"nav":{"customer":"ગ્રાહક ઍપ","staff":"સ્ટાફ ઍપ","map":"ડિવાઇસ નકશો","how":"કેવી રીતે કામ કરે છે","download":"ડાઉનલોડ","dl":"ઍપ મેળવો"},"hero":{"pill":"હવે Android પર · v1.1.0","t1":"નાની લોન જે","t2":"તમને આગળ વધારે","lede":"તમારા ફોનથી અરજી કરો, EMI જુઓ અને UPIથી ચુકવણી કરો. દરેક પગલે ફીલ્ડ અધિકારી તમારી સાથે, તમારી ભાષામાં.","cta1":"ઍપ ડાઉનલોડ કરો","cta2":"સ્ટાફ ઍપ જુઓ","trust":"નોંધાયેલ NBFC-MFI. તમારો ડેટા ભારતમાં જ રહે છે.","f1t":"EMI મળી ગઈ","f1s":"₹2,837 · UPI દ્વારા","f2t":"4 મિનિટ પહેલાં સિંક","f2s":"ફીલ્ડ અધિકારી ઍપ","f3t":"12માંથી 3 EMI ભરાઈ","f3s":"આગલો હપ્તો 5 નવેમ્બર"},"strip":{"s1b":"ઈમેલથી સાઇન ઇન","s1s":"અમે તમને ઈમેલ પર કોડ મોકલીએ છીએ. ફોન નંબરની જરૂર નથી.","s2b":"UPIથી ચુકવણી","s2s":"થોડી સેકન્ડમાં EMI નોંધો","s3b":"हिंदी · ગુજરાતી · English","s3s":"તમારી ભાષામાં ઍપ વાપરો","s4b":"ડેટા ભારતમાં","s4s":"નોંધાયેલ NBFC-MFI"},"cust":{"eyebrow":"ગ્રાહક ઍપ","title":"તમારી લોન, તમારા ખિસ્સામાં","sub":"નીચેની દરેક સ્ક્રીન LH Microfinance ઍપની છે. ફોન પર જોવા કોઈ પગલા પર ટેપ કરો.","c1t":"હૂંફાળું સ્વાગત","c1p":"ઍપ ખોલો અને તમારી ભાષા પસંદ કરો. પહેલી સ્ક્રીન પર કોઈ ફોર્મ નહીં.","c2t":"ઈમેલથી સાઇન ઇન","c2p":"ફક્ત નામ, ઈમેલ અને પાસવર્ડથી સાઇન ઇન કરો અથવા ખાતું બનાવો.","c3t":"એક નજરમાં તમારી લોન","c3p":"આગલી ચુકવણી, ભરેલી EMI, બાકી રકમ અને એક ટેપમાં ચુકવણી નોંધો."},"staff":{"eyebrow":"સ્ટાફ ઍપ","title":"ફીલ્ડ અને શાખા, બંને માટે","sub":"ફીલ્ડ અધિકારીઓ મુલાકાત અને વસૂલાતનું આયોજન કરે છે. શાખા સ્ટાફ દરેક ગ્રાહકના ડિવાઇસની સ્થિતિ જુએ છે અને સંમતિ હોય તો છેલ્લું સ્થાન પણ.","s1t":"ફીલ્ડ અધિકારીનો દિવસ","s1p":"વસૂલવાની રકમ, નક્કી મુલાકાતો અને ઑફલાઇન વસૂલાત જે પછી સિંક થાય.","s2t":"ડિવાઇસ રજિસ્ટર","s2p":"દરેક નોંધાયેલ ફોન, તાજું, જૂનું કે પાછું ખેંચેલું સ્ટેટસ સાથે.","s3t":"ડિવાઇસ વિગત","s3p":"ફોન મોડલ, છેલ્લું ચેક-ઇન, SIM સ્થિતિ અને સ્ટાફના વિકલ્પો.","s4t":"નકશા પર ડિવાઇસ","s4p":"સંમતિ આપનાર ગ્રાહકોના ફોને છેલ્લે ક્યાં ચેક-ઇન કર્યું, લાઇવ નકશા પર.","s5t":"ડિવાઇસ ટેલિમેટ્રી","s5p":"એક ફોનની બૅટરી, નેટવર્ક, સ્થાનની ચોકસાઈ અને સિંક ઇતિહાસ."},"map":{"eyebrow":"લાઇવ ડિવાઇસ નકશો","title":"દરેક ડિવાઇસ, ભારતમાં ગમે ત્યાં","sub":"સાચો નકશો, જેને તમે દેશમાં ગમે ત્યાં ખસેડી અને ઝૂમ કરી શકો. કોઈ જગ્યા શોધો અથવા તમારું સ્થાન જુઓ. પિન નમૂના ડિવાઇસ છે; સાચો ગ્રાહક ડેટા ફક્ત સાઇન-ઇન સ્ટાફ ઍપમાં રહે છે.","search":"શહેર, વિસ્તાર કે પિન કોડ શોધો","go":"શોધો","me":"મારું સ્થાન","india":"આખું ભારત","live":"લાઇવ","all":"બધા","fresh":"તાજું","stale":"જૂનું","off":"સ્થાન બંધ","lgFresh":"1 કલાકમાં ચેક-ઇન","lgStale":"24 કલાકથી ચેક-ઇન નહીં","lgOff":"સ્થાનની ના પાડી","lgMe":"તમે","battery":"બૅટરી","network":"નેટવર્ક","seen":"છેલ્લું ચેક-ઇન","acc":"ચોકસાઈ","phone":"ફોન","app":"ઍપ","sim":"SIM","loan":"લોન","consent":"સ્થાન સંમતિ","given":"આપી","declined":"ના પાડી","none":"શેર નથી","consentNote":"સ્થાન ફક્ત સંમતિ આપનાર ગ્રાહકોનું જ દેખાય છે. સ્ટાફે પરવાનગી માગવી પડે છે અને દરેક વખત જોવાનું નોંધાય છે.","meHere":"તમે અહીં છો","meDenied":"તમારા બ્રાઉઝરમાં સ્થાનની પરવાનગી નકારાઈ.","meNo":"તમારું બ્રાઉઝર સ્થાન શેર કરી શકતું નથી.","notFound":"આ શોધ માટે કોઈ જગ્યા મળી નહીં.","searching":"શોધી રહ્યા છીએ…","tiles":"આ પ્રીવ્યૂમાં નકશો લોડ થઈ શકતો નથી.","tilesLink":"લાઇવ વેબસાઇટ ખોલો"},"how":{"eyebrow":"કેવી રીતે કામ કરે છે","title":"અરજીથી છેલ્લી EMI સુધી","tabC":"ગ્રાહકો માટે","tabS":"સ્ટાફ માટે","c1t":"ડાઉનલોડ કરો અને સાઇન ઇન","c1p":"ઍપ ઇન્સ્ટોલ કરો, ભાષા પસંદ કરો અને ઈમેલથી સાઇન ઇન કરો.","c2t":"અરજી અને KYC","c2p":"લોન પસંદ કરો, તમારી વિગતો અને દસ્તાવેજોના ફોટા ઉમેરો.","c3t":"પૈસા મેળવો","c3p":"ટૂંકી ફીલ્ડ મુલાકાત પછી પૈસા તમારા બૅન્ક ખાતામાં મોકલાય છે.","c4t":"UPIથી EMI ભરો","c4p":"દરેક હપ્તા પહેલાં રિમાઇન્ડર મેળવો અને થોડા ટેપમાં ચુકવણી કરો.","s1t":"લીડ શરૂ કરો","s1p":"ગ્રાહકને તેમના કે તમારા ફોન પર અરજીમાં મદદ કરો.","s2t":"ફીલ્ડમાં ચકાસણી","s2p":"મુલાકાત લો, દસ્તાવેજ તપાસો અને નોંધ કરો, ઑફલાઇન પણ.","s3t":"મંજૂરી અને વિતરણ","s3p":"મેકર-ચેકર મંજૂરી, પૂરા ઑડિટ રેકોર્ડ સાથે.","s4t":"વસૂલાત અને દેખરેખ","s4p":"નકશા પર વસૂલાત અને ડિવાઇસ ચેક-ઇન જુઓ."},"trust":{"eyebrow":"વિશ્વાસ અને ગોપનીયતા","title":"ન્યાયી ધિરાણ, પૂરી કાળજી સાથે","t1t":"પહેલાં સંમતિ","t1p":"સ્થાન વૈકલ્પિક છે. ગ્રાહક ના પાડી શકે અને ગમે ત્યારે સંમતિ પાછી ખેંચી શકે.","t2t":"દરેક વખત જોવાનું નોંધાય","t2p":"ડિવાઇસ જોવાનો રેકોર્ડ રહે છે: કોણે, ક્યારે અને શા માટે.","t3t":"ફોન લૉક થતો નથી","t3p":"સામાન્ય ઇન્સ્ટોલ ગ્રાહકનો ફોન લૉક, વાઇપ કે બ્લૉક કરી શકતું નથી.","t4t":"ઈમેલ કોડથી સાઇન ઇન","t4p":"ફોન નંબર આપ્યા વિના સુરક્ષિત સાઇન ઇન.","t5t":"ઑફલાઇન પણ ચાલે","t5p":"ફીલ્ડ વસૂલાત ફોનમાં સાચવાય છે અને નેટવર્ક આવે ત્યારે સિંક થાય છે.","t6t":"ડેટા ભારતમાં","t6p":"નોંધાયેલ NBFC-MFI દ્વારા ભારતમાં હોસ્ટ."},"dl":{"title":"LH Microfinance તમારા ફોન પર મેળવો","sub":"Android ઍપ સીધી ડાઉનલોડ કરો. તે મફત છે અને ઇન્સ્ટોલ થવામાં લગભગ એક મિનિટ લાગે છે.","f1":"વર્ઝન 1.1.0","f2":"Android 6.0 અને ઉપર","f3":"આશરે 38 MB","f4":"મફત","i1":"નીચે APK ડાઉનલોડ કરો પર ટેપ કરો.","i2":"પૂછવામાં આવે ત્યારે તમારા બ્રાઉઝરથી ઇન્સ્ટોલની પરવાનગી આપો.","i3":"LH Microfinance ખોલો અને તમારી ભાષા પસંદ કરો.","btn":"APK ડાઉનલોડ કરો","qr":"ડાઉનલોડ માટે ફોન કૅમેરાથી સ્કૅન કરો","copied":"ડાઉનલોડ લિંક કૉપિ થઈ"},"foot":{"rights":"© 2026 LH Microfinance. નોંધાયેલ NBFC-MFI.","privacy":"ગોપનીયતા","support":"સહાય"}}};
+const APK_URL = "https://github.com/Yadav0141/marketing/releases/latest/download/lh-microfinance-customer.apk";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch {} }
+};
+let lang = 'en';
+const t = (key) => key.split('.').reduce((o, k) => (o || {})[k], I18N[lang]) ?? key.split('.').reduce((o, k) => (o || {})[k], I18N.en) ?? key;
+
+function toast(msg) {
+  const el = $('#toast');
+  el.textContent = msg;
+  el.classList.add('on');
+  clearTimeout(toast.h);
+  toast.h = setTimeout(() => el.classList.remove('on'), 2600);
+}
+
+/* language */
+function setLang(l) {
+  lang = I18N[l] ? l : 'en';
+  document.documentElement.lang = lang;
+  $$('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  $$('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  $$('.seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  store.set('lh-lang', lang);
+  renderList();
+  renderDev();
+}
+$$('.seg button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+/* theme */
+$('#theme').addEventListener('click', () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+  store.set('lh-theme', root.dataset.theme);
+});
+const savedTheme = store.get('lh-theme');
+if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+
+/* phone carousels */
+function carousel(box) {
+  const steps = $$('[data-go]', box);
+  const scrs = $$('.scr', box);
+  let i = 0, timer;
+  const show = (n) => {
+    i = (n + steps.length) % steps.length;
+    const id = steps[i].dataset.go;
+    steps.forEach((s, k) => s.setAttribute('aria-selected', String(k === i)));
+    scrs.forEach(s => s.classList.toggle('on', s.dataset.scr === id));
+    clearTimeout(timer);
+    timer = setTimeout(() => show(i + 1), 6000);
+  };
+  steps.forEach((s, k) => s.addEventListener('click', () => show(k)));
+  box.addEventListener('mouseenter', () => { clearTimeout(timer); box.classList.add('paused'); });
+  box.addEventListener('mouseleave', () => { box.classList.remove('paused'); show(i); });
+  show(0);
+}
+$$('[data-carousel]').forEach(carousel);
+(function heroCycle() {
+  const scrs = $$('#heroPhone .scr');
+  let i = 0;
+  setInterval(() => { i = (i + 1) % scrs.length; scrs.forEach((s, k) => s.classList.toggle('on', k === i)); }, 4500);
+})();
+
+/* journeys tabs */
+$$('.tabs button').forEach(b => b.addEventListener('click', () => {
+  $$('.tabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+  $$('.lane').forEach(l => { l.hidden = l.id !== b.dataset.lane; if (!l.hidden) requestAnimationFrame(() => l.classList.add('in')); });
+}));
+
+/* reveal on scroll */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+$$('.reveal').forEach(el => io.observe(el));
+
+/* sample devices at real places across India */
+const DEVICES = [
+  { id: 'DEV-7K2Q-91XF', name: 'Sunita Pawar', city: 'Hadapsar, Pune', lat: 18.5089, lng: 73.9260, st: 'fresh', bat: 82, chg: true, net: '4G', min: 8, acc: 12, phone: 'vivo Y28 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-3M8C-20LA', name: 'Rekha Jadhav', city: 'Pimpri-Chinchwad', lat: 18.6298, lng: 73.7997, st: 'fresh', bat: 64, chg: false, net: 'Wi-Fi', min: 3, acc: 20, phone: 'Redmi Note 13 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-4Q1N-66PR', name: 'Meena Patel', city: 'Maninagar, Ahmedabad', lat: 22.9962, lng: 72.6030, st: 'fresh', bat: 47, chg: false, net: '4G', min: 14, acc: 9, phone: 'Samsung A15 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-8T5H-03KD', name: 'Hetal Shah', city: 'Varachha, Surat', lat: 21.2050, lng: 72.8530, st: 'fresh', bat: 91, chg: true, net: '5G', min: 2, acc: 6, phone: 'realme 12 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-9P1D-77QW', name: 'Lata Shinde', city: 'Dharavi, Mumbai', lat: 19.0380, lng: 72.8538, st: 'stale', bat: 15, chg: false, net: 'No signal', min: 4320, acc: 45, phone: 'vivo Y28 · A14', app: '1.0.3', sim: 'Absent', loan: 'Overdue' },
+  { id: 'DEV-1B7Y-58UV', name: 'Kamla Devi', city: 'Mansarovar, Jaipur', lat: 26.8505, lng: 75.7628, st: 'fresh', bat: 58, chg: false, net: '4G', min: 22, acc: 15, phone: 'Moto G34 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-5C2R-41GH', name: 'Pushpa Yadav', city: 'Alambagh, Lucknow', lat: 26.8133, lng: 80.9050, st: 'fresh', bat: 73, chg: false, net: '4G', min: 31, acc: 18, phone: 'Redmi 13C · A13', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-6R0K-12ZE', name: 'Sarita Kumari', city: 'Kankarbagh, Patna', lat: 25.5940, lng: 85.1580, st: 'off', bat: 39, chg: false, net: '3G', min: 55, acc: null, phone: 'itel A70 · A13', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-2H6T-58NB', name: 'Mousumi Das', city: 'Behala, Kolkata', lat: 22.4980, lng: 88.3100, st: 'stale', bat: 22, chg: false, net: 'Wi-Fi', min: 15840, acc: 60, phone: 'realme C55 · A13', app: '1.0.3', sim: 'Unknown', loan: 'Active' },
+  { id: 'DEV-7J3W-90QS', name: 'Lakshmi Reddy', city: 'Kukatpally, Hyderabad', lat: 17.4948, lng: 78.3996, st: 'fresh', bat: 88, chg: true, net: '5G', min: 5, acc: 8, phone: 'Samsung M14 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-0F9E-27MX', name: 'Savitha Gowda', city: 'Yelahanka, Bengaluru', lat: 13.1007, lng: 77.5963, st: 'fresh', bat: 66, chg: false, net: '4G', min: 11, acc: 10, phone: 'POCO M6 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-3V6L-84TA', name: 'Selvi Murugan', city: 'Tambaram, Chennai', lat: 12.9249, lng: 80.1000, st: 'off', bat: 51, chg: false, net: '4G', min: 40, acc: null, phone: 'vivo T3 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-4K8P-15BC', name: 'Vandana Thakre', city: 'Sitabuldi, Nagpur', lat: 21.1458, lng: 79.0882, st: 'fresh', bat: 79, chg: false, net: '4G', min: 18, acc: 14, phone: 'Redmi 12 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-6N2D-33FY', name: 'Geeta Verma', city: 'Vijay Nagar, Indore', lat: 22.7533, lng: 75.8937, st: 'stale', bat: 9, chg: false, net: 'No signal', min: 2880, acc: 80, phone: 'Lava Blaze · A13', app: '1.0.3', sim: 'Absent', loan: 'Overdue' },
+  { id: 'DEV-8W4G-62HN', name: 'Anita Rani', city: 'Uttam Nagar, Delhi', lat: 28.6210, lng: 77.0550, st: 'fresh', bat: 70, chg: false, net: '4G', min: 7, acc: 11, phone: 'Samsung A05 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-5S1M-09RJ', name: 'Pranita Boro', city: 'Dispur, Guwahati', lat: 26.1433, lng: 91.7898, st: 'fresh', bat: 55, chg: false, net: '4G', min: 26, acc: 22, phone: 'Redmi 13C · A13', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-2A7X-71KE', name: 'Kavita Rathod', city: 'Vadodara', lat: 22.3072, lng: 73.1812, st: 'fresh', bat: 61, chg: false, net: '4G', min: 9, acc: 13, phone: 'vivo Y18 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' },
+  { id: 'DEV-9D3F-48WP', name: 'Usha Nair', city: 'Kakkanad, Kochi', lat: 10.0159, lng: 76.3419, st: 'fresh', bat: 84, chg: true, net: 'Wi-Fi', min: 4, acc: 7, phone: 'Samsung F15 · A14', app: '1.1.0', sim: 'Ready', loan: 'Active' }
+];
+const COLOR = { fresh: '#1F8A5B', stale: '#F2A900', off: '#8F8DA8' };
+let filter = 'all', selId = DEVICES[0].id, map = null, markers = {}, offRing = null, meMarker = null;
+
+const ago = (min) => {
+  const rtf = new Intl.RelativeTimeFormat(lang === 'en' ? 'en-IN' : lang + '-IN', { numeric: 'auto', style: 'short' });
+  if (min < 60) return rtf.format(-Math.max(1, Math.round(min)), 'minute');
+  if (min < 1440) return rtf.format(-Math.round(min / 60), 'hour');
+  return rtf.format(-Math.round(min / 1440), 'day');
+};
+const badgeCls = (d) => d.st === 'fresh' ? 'b-fresh' : d.st === 'stale' ? 'b-stale' : 'b-off';
+const stLabel = (d) => d.st === 'fresh' ? t('map.fresh') : d.st === 'stale' ? t('map.stale') : t('map.off');
+const visible = (d) => filter === 'all' || d.st === filter;
+const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+function renderList() {
+  const box = $('#devlist');
+  box.innerHTML = DEVICES.filter(visible).map(d =>
+    `<button data-id="${d.id}" aria-current="${d.id === selId}"><i class="dot" style="background:${COLOR[d.st]}"></i><span class="nm">${esc(d.name)} · ${esc(d.city)}</span><small>${ago(d.min)}</small></button>`
+  ).join('');
+  $$('button', box).forEach(b => b.addEventListener('click', () => select(b.dataset.id, true)));
+}
+
+function renderDev() {
+  const d = DEVICES.find(x => x.id === selId);
+  if (!d) return;
+  const batColor = d.bat < 20 ? '#A12C2C' : d.bat < 50 ? '#F2A900' : '#1F8A5B';
+  const loc = d.st === 'off' ? t('map.none') : `${d.lat.toFixed(4)}, ${d.lng.toFixed(4)}`;
+  $('#dev').innerHTML = `
+    <div class="dev-top"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#D6D3F6"/><path d="M11 18h2"/></svg></span>
+      <div style="flex:1;min-width:0"><b>${esc(d.name)}</b><small>${esc(d.id)} · ${esc(d.city)}</small></div>
+      <span class="badge ${badgeCls(d)}">${stLabel(d)}</span></div>
+    <div class="metrics">
+      <div class="metric"><small>${t('map.battery')}</small><b>${d.bat}%${d.chg ? ' ⚡' : ''}</b><div class="meter"><i style="width:${d.bat}%;background:${batColor}"></i></div></div>
+      <div class="metric"><small>${t('map.network')}</small><b>${esc(d.net)}</b></div>
+      <div class="metric"><small>${t('map.seen')}</small><b>${ago(d.min)}</b></div>
+      <div class="metric"><small>${t('map.acc')}</small><b>${d.acc ? '±' + d.acc + ' m' : '—'}</b></div>
+    </div>
+    <div class="rows">
+      <div><span>${t('map.phone')}</span><span>${esc(d.phone)}</span></div>
+      <div><span>${t('map.app')}</span><span>${esc(d.app)}</span></div>
+      <div><span>${t('map.sim')}</span><span>${esc(d.sim)}</span></div>
+      <div><span>${t('map.loan')}</span><span style="color:${d.loan === 'Overdue' ? '#A12C2C' : 'inherit'}">${esc(d.loan)}</span></div>
+      <div><span>${t('map.consent')}</span><span>${d.st === 'off' ? t('map.declined') : t('map.given')}</span></div>
+      <div><span>GPS</span><span>${loc}</span></div>
+    </div>`;
+}
+
+function pinIcon(d) {
+  return L.divIcon({ className: '', iconSize: [22, 22], iconAnchor: [11, 11],
+    html: `<div class="lh-pin${d.id === selId ? ' sel' : ''}"><b style="background:${COLOR[d.st]}"></b><i style="background:${COLOR[d.st]}"></i></div>` });
+}
+
+function select(id, fly) {
+  selId = id;
+  const d = DEVICES.find(x => x.id === id);
+  renderList(); renderDev();
+  if (!map) return;
+  Object.values(markers).forEach(m => m.setIcon(pinIcon(m.dev)));
+  if (offRing) { map.removeLayer(offRing); offRing = null; }
+  if (d.st === 'off') offRing = L.circle([d.lat, d.lng], { radius: 8000, color: '#8F8DA8', dashArray: '6 6', fillOpacity: .08 }).addTo(map);
+  if (fly) map.flyTo([d.lat, d.lng], d.st === 'off' ? 11 : 14, { duration: 1.2 });
+}
+
+function applyFilter() {
+  $$('.filters button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === filter)));
+  if (map) Object.values(markers).forEach(m => { visible(m.dev) ? m.addTo(map) : map.removeLayer(m); });
+  renderList();
+}
+$$('.filters button').forEach(b => b.addEventListener('click', () => { filter = b.dataset.f; applyFilter(); }));
+
+function initMap() {
+  if (typeof L === 'undefined') { $('#maperr').classList.add('on'); return; }
+  map = L.map('lhmap', { zoomControl: true, scrollWheelZoom: false, minZoom: 4, maxBounds: [[2, 60], [40, 102]] }).setView([22.5, 79], 5);
+  map.on('focus click', () => map.scrollWheelZoom.enable());
+  map.on('blur', () => map.scrollWheelZoom.disable());
+  // Esri needs no key or Referer; OSM refuses Referer-less requests (e.g. file://), so it is the fallback.
+  const SOURCES = [
+    ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', 'Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'],
+    ['https://tile.openstreetmap.org/{z}/{x}/{y}.png', '&copy; OpenStreetMap contributors']
+  ];
+  const useSource = (i) => {
+    let loaded = 0, failed = 0;
+    const layer = L.tileLayer(SOURCES[i][0], { maxZoom: 19, attribution: SOURCES[i][1] })
+      .on('tileload', () => { loaded++; $('#maperr').classList.remove('on'); })
+      .on('tileerror', () => {
+        if (++failed < 4 || loaded) return;
+        map.removeLayer(layer);
+        if (i + 1 < SOURCES.length) useSource(i + 1); else $('#maperr').classList.add('on');
+      })
+      .addTo(map);
+  };
+  useSource(0);
+  DEVICES.forEach(d => {
+    if (d.st === 'off') return;
+    const m = L.marker([d.lat, d.lng], { icon: pinIcon(d), keyboard: true, title: d.name });
+    m.dev = d;
+    m.on('click', () => select(d.id, false));
+    markers[d.id] = m;
+  });
+  DEVICES.filter(d => d.st === 'off').forEach(d => {
+    const m = L.marker([d.lat, d.lng], { icon: pinIcon(d), opacity: .7, title: d.name });
+    m.dev = d; m.on('click', () => select(d.id, false)); markers[d.id] = m;
+  });
+  applyFilter();
+  select(selId, false);
+}
+
+/* simulate live check-ins */
+setInterval(() => {
+  DEVICES.forEach(d => { d.min += 0.1; });
+  const pool = DEVICES.filter(d => d.st === 'fresh');
+  const d = pool[Math.floor(Math.random() * pool.length)];
+  d.min = 0.2;
+  d.bat = Math.max(5, Math.min(100, d.bat + (d.chg ? 1 : -1)));
+  if (d.acc) { d.lat += (Math.random() - .5) * .0008; d.lng += (Math.random() - .5) * .0008; if (markers[d.id]) markers[d.id].setLatLng([d.lat, d.lng]); }
+  renderList();
+  if (d.id === selId) renderDev();
+}, 6000);
+
+/* search */
+$('#search').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const q = $('#q').value.trim();
+  if (!q || !map) return;
+  toast(t('map.searching'));
+  try {
+    const r = await fetch(`https://nominatim.openstreetmap.org/search?format=json&countrycodes=in&limit=1&accept-language=${lang}&q=${encodeURIComponent(q)}`);
+    const [hit] = await r.json();
+    if (!hit) return toast(t('map.notFound'));
+    const b = hit.boundingbox.map(Number);
+    map.flyToBounds([[b[0], b[2]], [b[1], b[3]]], { maxZoom: 14, duration: 1.2 });
+    toast(hit.display_name.split(',').slice(0, 3).join(','));
+  } catch { toast(t('map.notFound')); }
+});
+
+/* my location */
+$('#me').addEventListener('click', () => {
+  if (!navigator.geolocation) return toast(t('map.meNo'));
+  navigator.geolocation.getCurrentPosition(p => {
+    const ll = [p.coords.latitude, p.coords.longitude];
+    if (!map) return;
+    if (meMarker) map.removeLayer(meMarker);
+    meMarker = L.marker(ll, { icon: L.divIcon({ className: '', iconSize: [20, 20], iconAnchor: [10, 10], html: '<div class="lh-me"></div>' }) })
+      .addTo(map).bindPopup(`<b>${t('map.meHere')}</b><br>${ll[0].toFixed(5)}, ${ll[1].toFixed(5)} · ±${Math.round(p.coords.accuracy)} m`).openPopup();
+    map.flyTo(ll, 15, { duration: 1.2 });
+  }, err => toast(err.code === 1 ? t('map.meDenied') : t('map.meNo')), { enableHighAccuracy: true, timeout: 12000 });
+});
+$('#india').addEventListener('click', () => map && map.flyTo([22.5, 79], 5, { duration: 1 }));
+
+/* download */
+try { new QRCode($('#qr'), { text: APK_URL, width: 200, height: 200, colorDark: '#23206B', colorLight: '#FFFFFF', correctLevel: QRCode.CorrectLevel.M }); } catch {}
+$('#copy').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(APK_URL); toast(t('dl.copied')); } catch { toast(APK_URL); }
+});
+
+initMap();
+setLang(new URLSearchParams(location.search).get('lang') || store.get('lh-lang') || (navigator.language || 'en').slice(0, 2));
+
+</script>
+</body>
+</html>

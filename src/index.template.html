@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LH Microfinance</title>
+<meta name="description" content="LH Microfinance: small loans that help you grow. Apply, track EMIs and pay by UPI in Hindi, Gujarati or English.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Baloo+Bhai+2:wght@600;700;800&family=Mukta:wght@400;500;600;700&family=Mukta+Vaani:wght@400;500;600;700&display=swap">
+<style>/*LEAFLET*/</style>
+<style>/*STYLES*/</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="LH Microfinance home">
+      <span class="mark"><svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></span>
+      <span class="word">LH <b>Micro</b>finance</span>
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#customer" data-i18n="nav.customer"></a><a href="#staff" data-i18n="nav.staff"></a><a href="#map" data-i18n="nav.map"></a><a href="#how" data-i18n="nav.how"></a><a href="#download" data-i18n="nav.download"></a>
+    </nav>
+    <div class="seg" role="group" aria-label="Language">
+      <button data-lang="en" aria-pressed="true">EN</button><button data-lang="hi" aria-pressed="false" lang="hi">हि</button><button data-lang="gu" aria-pressed="false" lang="gu">ગુ</button>
+    </div>
+    <button class="iconbtn" id="theme" aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <a class="btn btn-gold btn-sm dl" href="#download" data-i18n="nav.dl"></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="ripple" viewBox="0 0 900 900" aria-hidden="true"><circle cx="450" cy="450" r="160"/><circle cx="450" cy="450" r="250"/><circle cx="450" cy="450" r="340"/><circle cx="450" cy="450" r="430"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><i></i><span data-i18n="hero.pill"></span></span>
+      <h1><span data-i18n="hero.t1" style="color:inherit"></span><br><span data-i18n="hero.t2"></span></h1>
+      <p class="hi" lang="hi">छोटा कर्ज़, पक्का भरोसा</p>
+      <p class="lede" data-i18n="hero.lede"></p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#download"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i18n="hero.cta1"></span></a>
+        <a class="btn btn-ghost" href="#staff" data-i18n="hero.cta2"></a>
+      </div>
+      <div class="trust"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9C6EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="hero.trust"></span></div>
+    </div>
+    <div class="stage">
+      <div class="float f1"><span class="ic" style="background:#E2F4EA"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b data-i18n="hero.f1t"></b><small data-i18n="hero.f1s"></small></span></div>
+      <div class="float f2"><span class="ic" style="background:#ECEBFA"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><span><b data-i18n="hero.f2t"></b><small data-i18n="hero.f2s"></small></span></div>
+      <div class="float f3"><span class="ic" style="background:#FDF1D3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A5A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><span><b data-i18n="hero.f3t"></b><small data-i18n="hero.f3s"></small></span></div>
+      <div class="phone" id="heroPhone" style="--s:.68"><div class="vp"><!--SCREEN_HERO--></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap">
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" fill="#D6D3F6"/><path d="M4 7l8 6 8-6"/></svg></span><span><b data-i18n="strip.s1b"></b><small data-i18n="strip.s1s"></small></span></div>
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" fill="#D6D3F6"/><path d="M9.5 9h5M9.5 13h5"/></svg></span><span><b data-i18n="strip.s2b"></b><small data-i18n="strip.s2s"></small></span></div>
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z" fill="#D6D3F6"/></svg></span><span><b data-i18n="strip.s3b"></b><small data-i18n="strip.s3s"></small></span></div>
+  <div class="chip"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z" fill="#D6D3F6"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span><b data-i18n="strip.s4b"></b><small data-i18n="strip.s4s"></small></span></div>
+</div></div>
+
+<section id="customer">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="cust.eyebrow"></span><h2 class="h2" data-i18n="cust.title"></h2><p class="sub" data-i18n="cust.sub"></p></div>
+    <div class="show" data-carousel>
+      <div class="steps" role="tablist">
+        <button class="step" role="tab" data-go="c1" aria-selected="true"><span class="n">1</span><span><h3 data-i18n="cust.c1t"></h3><p data-i18n="cust.c1p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="c2" aria-selected="false"><span class="n">2</span><span><h3 data-i18n="cust.c2t"></h3><p data-i18n="cust.c2p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="c3" aria-selected="false"><span class="n">3</span><span><h3 data-i18n="cust.c3t"></h3><p data-i18n="cust.c3p"></p></span><i class="bar"></i></button>
+      </div>
+      <div class="phone"><div class="vp"><!--SCREENS_CUSTOMER--></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="staff" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="staff.eyebrow"></span><h2 class="h2" data-i18n="staff.title"></h2><p class="sub" data-i18n="staff.sub"></p></div>
+    <div class="show rev" data-carousel>
+      <div class="phone"><div class="vp"><!--SCREENS_STAFF--></div></div>
+      <div class="steps" role="tablist">
+        <button class="step" role="tab" data-go="s1" aria-selected="true"><span class="n">1</span><span><h3 data-i18n="staff.s1t"></h3><p data-i18n="staff.s1p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s2" aria-selected="false"><span class="n">2</span><span><h3 data-i18n="staff.s2t"></h3><p data-i18n="staff.s2p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s3" aria-selected="false"><span class="n">3</span><span><h3 data-i18n="staff.s3t"></h3><p data-i18n="staff.s3p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s4" aria-selected="false"><span class="n">4</span><span><h3><span data-i18n="staff.s4t"></span><span class="new">New</span></h3><p data-i18n="staff.s4p"></p></span><i class="bar"></i></button>
+        <button class="step" role="tab" data-go="s5" aria-selected="false"><span class="n">5</span><span><h3><span data-i18n="staff.s5t"></span><span class="new">New</span></h3><p data-i18n="staff.s5p"></p></span><i class="bar"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map" class="mapsec">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="map.eyebrow"></span><h2 class="h2" data-i18n="map.title"></h2><p class="sub" data-i18n="map.sub"></p></div>
+    <div class="mapgrid">
+      <div class="mapcard">
+        <div class="maphead">
+          <span class="live" data-i18n="map.live"></span>
+          <div class="filters" role="group" aria-label="Filter">
+            <button data-f="all" aria-pressed="true" data-i18n="map.all"></button><button data-f="fresh" aria-pressed="false" data-i18n="map.fresh"></button><button data-f="stale" aria-pressed="false" data-i18n="map.stale"></button><button data-f="off" aria-pressed="false" data-i18n="map.off"></button>
+          </div>
+        </div>
+        <div class="maptools">
+          <form id="search"><input id="q" type="search" autocomplete="off" data-i18n-ph="map.search" aria-label="Search"><button class="mt-go" type="submit" data-i18n="map.go"></button></form>
+          <button class="mt-me" id="me" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span data-i18n="map.me"></span></button>
+          <button class="mt-in" id="india" type="button" data-i18n="map.india"></button>
+        </div>
+        <div style="position:relative"><div id="lhmap" role="application" aria-label="Map of India"></div><div class="maperr" id="maperr"><div><p data-i18n="map.tiles"></p><p style="margin-top:8px"><a href="__SITE_URL__#map" target="_blank" rel="noopener" data-i18n="map.tilesLink"></a></p></div></div></div>
+        <div class="legend"><span><i style="background:#1F8A5B"></i><span data-i18n="map.lgFresh"></span></span><span><i style="background:#F2A900"></i><span data-i18n="map.lgStale"></span></span><span><i style="background:#8F8DA8"></i><span data-i18n="map.lgOff"></span></span><span><i style="background:#3B82F6"></i><span data-i18n="map.lgMe"></span></span></div>
+      </div>
+      <div class="side">
+        <div class="dev" id="dev" aria-live="polite"></div>
+        <div class="devlist" id="devlist"></div>
+        <div class="consent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="map.consentNote"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="how.eyebrow"></span><h2 class="h2" data-i18n="how.title"></h2></div>
+    <div class="tabs" role="tablist"><button role="tab" data-lane="lc" aria-selected="true" data-i18n="how.tabC"></button><button role="tab" data-lane="ls" aria-selected="false" data-i18n="how.tabS"></button></div>
+    <div class="lane reveal" id="lc">
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span><h3 data-i18n="how.c1t"></h3><p data-i18n="how.c1p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="#D6D3F6"/><path d="M14 3v5h5"/></svg></span><h3 data-i18n="how.c2t"></h3><p data-i18n="how.c2p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5" fill="#D6D3F6"/><path d="M3 10.5h18M7 15h3"/></svg></span><h3 data-i18n="how.c3t"></h3><p data-i18n="how.c3p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" fill="#D6D3F6"/><path d="M9.5 9h5M9.5 13h5"/></svg></span><h3 data-i18n="how.c4t"></h3><p data-i18n="how.c4p"></p></div>
+    </div>
+    <div class="lane" id="ls" hidden>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9" fill="#D6D3F6"/><path d="M12 8v8M8 12h8"/></svg></span><h3 data-i18n="how.s1t"></h3><p data-i18n="how.s1p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="#D6D3F6"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3 data-i18n="how.s2t"></h3><p data-i18n="how.s2p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" fill="#D6D3F6"/><path d="M9 12l2 2 4-4"/></svg></span><h3 data-i18n="how.s3t"></h3><p data-i18n="how.s3p"></p></div>
+      <div class="jcard"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z" fill="#D6D3F6"/><path d="M9 4v14M15 6v14"/></svg></span><h3 data-i18n="how.s4t"></h3><p data-i18n="how.s4p"></p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-i18n="trust.eyebrow"></span><h2 class="h2" data-i18n="trust.title"></h2></div>
+    <div class="tgrid">
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" fill="#D6D3F6"/><path d="M9 12l2 2 4-4"/></svg></span><h3 data-i18n="trust.t1t"></h3><p data-i18n="trust.t1p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" fill="#D6D3F6"/><circle cx="12" cy="12" r="2.8"/></svg></span><h3 data-i18n="trust.t2t"></h3><p data-i18n="trust.t2p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="#D6D3F6"/><path d="M11 18h2"/></svg></span><h3 data-i18n="trust.t3t"></h3><p data-i18n="trust.t3p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" fill="#D6D3F6"/><path d="M4 7l8 6 8-6"/></svg></span><h3 data-i18n="trust.t4t"></h3><p data-i18n="trust.t4p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><h3 data-i18n="trust.t5t"></h3><p data-i18n="trust.t5p"></p></div>
+      <div class="tcard reveal"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B36A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="#D6D3F6"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></span><h3 data-i18n="trust.t6t"></h3><p data-i18n="trust.t6p"></p></div>
+    </div>
+  </div>
+</section>
+
+<div class="dlsec" id="download"><div class="wrap">
+  <div class="dlcard reveal">
+    <div>
+      <h2 data-i18n="dl.title"></h2>
+      <p data-i18n="dl.sub"></p>
+      <div class="facts"><span data-i18n="dl.f1"></span><span data-i18n="dl.f2"></span><span data-i18n="dl.f3"></span><span data-i18n="dl.f4"></span></div>
+      <ol class="install"><li data-i18n="dl.i1"></li><li data-i18n="dl.i2"></li><li data-i18n="dl.i3"></li></ol>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
+        <a class="btn btn-gold" id="apk" href="__APK_URL__" target="_blank" rel="noopener" download><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i18n="dl.btn"></span></a>
+        <button class="btn btn-ghost" id="copy" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Link</button>
+      </div>
+    </div>
+    <div class="qrbox"><div id="qr" role="img" aria-label="QR code for the APK download"></div><small data-i18n="dl.qr"></small></div>
+  </div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><span class="mark" style="width:36px;height:36px;border-radius:12px"><svg width="26" height="26" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="80" r="29" fill="#F2A900"/><path d="M60 51V25" stroke="#F7F6FB" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M58 40C45.5 40 36.5 32 35.5 19.5C48 18.5 58 27 58 40Z" fill="#3DD68C"/><path d="M62 33C75.5 33 85.5 24 86.5 9.5C72 9.5 62 18.5 62 33Z" fill="#3DD68C"/></svg></span><span class="word" style="color:#fff;font-size:19px">LH <b>Micro</b>finance</span></div>
+  <span data-i18n="foot.rights"></span>
+</div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const I18N = /*I18N*/;
+const APK_URL = "__APK_URL__";
+/*APP*/
+</script>
+</body>
+</html>

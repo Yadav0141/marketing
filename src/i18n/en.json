@@ -1,0 +1,86 @@
+{
+  "nav": { "customer": "Customer app", "staff": "Staff app", "map": "Device map", "how": "How it works", "download": "Download", "dl": "Get the app" },
+  "hero": {
+    "pill": "Now on Android · v1.1.0",
+    "t1": "Small loans that",
+    "t2": "help you grow",
+    "lede": "Apply, track your EMIs and pay by UPI from your phone. Field officers stay with you at every step, in your language.",
+    "cta1": "Download the app",
+    "cta2": "See the staff app",
+    "trust": "Registered NBFC-MFI. Your data stays in India.",
+    "f1t": "EMI received", "f1s": "₹2,837 · via UPI",
+    "f2t": "Synced 4 min ago", "f2s": "Field officer app",
+    "f3t": "3 of 12 EMIs paid", "f3s": "Next due 5 Nov"
+  },
+  "strip": {
+    "s1b": "Sign in with email", "s1s": "We email you a code. No phone number needed.",
+    "s2b": "Pay by UPI", "s2s": "Record an EMI in seconds",
+    "s3b": "हिंदी · ગુજરાતી · English", "s3s": "Use the app in your language",
+    "s4b": "Data stays in India", "s4s": "Registered NBFC-MFI"
+  },
+  "cust": {
+    "eyebrow": "Customer app",
+    "title": "Your loan, in your pocket",
+    "sub": "Every screen below is from the LH Microfinance app. Tap a step to see it on the phone.",
+    "c1t": "A warm welcome", "c1p": "Open the app and pick your language. No forms on the first screen.",
+    "c2t": "Sign in with email", "c2p": "Sign in or create an account with just your name, email and a password.",
+    "c3t": "Your loan at a glance", "c3p": "Next payment, EMIs paid, what is left to repay, and one tap to record a payment."
+  },
+  "staff": {
+    "eyebrow": "Staff app",
+    "title": "Built for the field and the branch",
+    "sub": "Field officers plan visits and collections. Branch staff see each customer's device health and, with consent, where it last checked in.",
+    "s1t": "Field officer's day", "s1p": "Money to collect, visits planned, and offline collections that sync later.",
+    "s2t": "Device registry", "s2p": "Every registered phone with a fresh, stale or withdrawn status.",
+    "s3t": "Device detail", "s3p": "Phone model, last check-in, SIM state and the actions staff can take.",
+    "s4t": "Devices on a map", "s4p": "Where each consenting customer's phone last checked in, on a live map.",
+    "s5t": "Device telemetry", "s5p": "Battery, network, location accuracy and sync history for one phone."
+  },
+  "map": {
+    "eyebrow": "Live device map",
+    "title": "Every device, anywhere in India",
+    "sub": "A real map you can pan and zoom anywhere in the country. Search a place or show your own location. Pins are sample devices; real customer data stays in the signed-in staff app.",
+    "search": "Search a city, area or PIN code", "go": "Search", "me": "My location", "india": "All India",
+    "live": "Live", "all": "All", "fresh": "Fresh", "stale": "Stale", "off": "Location off",
+    "lgFresh": "Checked in < 1 h", "lgStale": "No check-in > 24 h", "lgOff": "Location declined", "lgMe": "You",
+    "battery": "Battery", "network": "Network", "seen": "Last check-in", "acc": "Accuracy",
+    "phone": "Phone", "app": "App", "sim": "SIM", "loan": "Loan", "consent": "Location consent",
+    "given": "Given", "declined": "Declined", "none": "Not shared",
+    "consentNote": "Location is shown only for customers who opted in. Staff must request access, and every view is logged.",
+    "meHere": "You are here", "meDenied": "Location permission was denied in your browser.", "meNo": "Your browser can't share location.",
+    "notFound": "No place found for that search.", "searching": "Searching…",
+    "tiles": "Map tiles can't load in this preview.", "tilesLink": "Open the live website"
+  },
+  "how": {
+    "eyebrow": "How it works", "title": "From application to last EMI",
+    "tabC": "For customers", "tabS": "For staff",
+    "c1t": "Download and sign in", "c1p": "Install the app, choose your language and sign in with your email.",
+    "c2t": "Apply and upload KYC", "c2p": "Pick a loan, add your details and photos of your documents.",
+    "c3t": "Get your money", "c3p": "After a short field visit, the money is sent to your bank account.",
+    "c4t": "Pay EMIs by UPI", "c4p": "Get reminders before each due date and pay in a few taps.",
+    "s1t": "Start a lead", "s1p": "Help a customer apply on their own phone or yours.",
+    "s2t": "Verify in the field", "s2p": "Visit, check documents and record notes, even offline.",
+    "s3t": "Approve and disburse", "s3p": "Maker-checker approvals with a full audit trail.",
+    "s4t": "Collect and monitor", "s4p": "Track collections and device check-ins on the map."
+  },
+  "trust": {
+    "eyebrow": "Trust and privacy", "title": "Fair lending, done carefully",
+    "t1t": "Consent first", "t1p": "Location is optional. Customers can say no, and can withdraw consent at any time.",
+    "t2t": "Every view is logged", "t2p": "Staff access to a device is recorded: who looked, when and why.",
+    "t3t": "No phone lock-outs", "t3p": "A standard install can't lock, wipe or block the customer's phone.",
+    "t4t": "Email sign-in codes", "t4p": "Secure sign-in without sharing a phone number.",
+    "t5t": "Works offline", "t5p": "Field collections are saved on the phone and sync when back online.",
+    "t6t": "Data stays in India", "t6p": "Hosted in India by a registered NBFC-MFI."
+  },
+  "dl": {
+    "title": "Get LH Microfinance on your phone",
+    "sub": "Download the Android app directly. It's free and takes about a minute to install.",
+    "f1": "Version 1.1.0", "f2": "Android 6.0 and above", "f3": "About 38 MB", "f4": "Free",
+    "i1": "Tap Download APK below.",
+    "i2": "When asked, allow installs from your browser.",
+    "i3": "Open LH Microfinance and choose your language.",
+    "btn": "Download APK", "qr": "Scan with your phone camera to download",
+    "copied": "Download link copied"
+  },
+  "foot": { "rights": "© 2026 LH Microfinance. Registered NBFC-MFI.", "privacy": "Privacy", "support": "Support" }
+}
