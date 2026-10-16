@@ -1,7 +1,7 @@
 {
   "nav": { "customer": "Customer app", "staff": "Staff app", "map": "Device map", "how": "How it works", "download": "Download", "dl": "Get the app" },
   "hero": {
-    "pill": "Now on Android · v1.1.0",
+    "pill": "Now on Android · v1.2.0",
     "t1": "Small loans that",
     "t2": "help you grow",
     "lede": "Apply, track your EMIs and pay by UPI from your phone. Field officers stay with you at every step, in your language.",
@@ -75,7 +75,7 @@
   "dl": {
     "title": "Get LH Microfinance on your phone",
     "sub": "Download the Android app directly. It's free and takes about a minute to install.",
-    "f1": "Version 1.1.0", "f2": "Android 6.0 and above", "f3": "About 38 MB", "f4": "Free",
+    "f1": "Version 1.2.0", "f2": "Android 6.0 and above", "f3": "About 38 MB", "f4": "Free",
     "i1": "Tap Download APK below.",
     "i2": "When asked, allow installs from your browser.",
     "i3": "Open LH Microfinance and choose your language.",
