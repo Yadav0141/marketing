@@ -1,7 +1,12 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
 const APK_URL = 'https://github.com/Yadav0141/marketing/releases/latest/download/lh-microfinance-customer.apk';
 const SITE_URL = 'https://yadav0141.github.io/marketing/';
+
+// Browser Maps keys are public by design; protect it with an HTTP-referrer restriction in Google Cloud.
+const keyFile = new URL('./.maps-key', import.meta.url);
+const MAPS_KEY = (process.env.GOOGLE_MAPS_KEY || (existsSync(keyFile) ? readFileSync(keyFile, 'utf8') : '')).trim();
+if (!MAPS_KEY) console.warn('No Google Maps key (set GOOGLE_MAPS_KEY or create .maps-key); the map will show its fallback message.');
 
 const src = (f) => readFileSync(new URL(`./src/${f}`, import.meta.url), 'utf8').replace(/^﻿/, '');
 const i18n = Object.fromEntries(['en', 'hi', 'gu'].map((l) => [l, JSON.parse(src(`i18n/${l}.json`))]));
@@ -12,7 +17,6 @@ for (const l of ['hi', 'gu']) if (keys(i18n[l]).sort().join() !== enKeys) throw 
 
 const customer = src('screens-customer.html');
 const html = [
-  ['/*LEAFLET*/', src('leaflet.css')],
   ['/*STYLES*/', src('styles.css')],
   ['<!--SCREEN_HERO-->', customer],
   ['<!--SCREENS_CUSTOMER-->', customer],
@@ -20,7 +24,8 @@ const html = [
   ['/*I18N*/', JSON.stringify(i18n)],
   ['/*APP*/', src('app.js')],
   ['__APK_URL__', APK_URL],
-  ['__SITE_URL__', SITE_URL]
+  ['__SITE_URL__', SITE_URL],
+  ['__MAPS_KEY__', MAPS_KEY]
 ].reduce((out, [k, v]) => out.split(k).join(v), src('index.template.html'));
 
 const used = [...html.matchAll(/data-i18n(?:-ph)?="([^"]+)"/g)].map((m) => m[1]);

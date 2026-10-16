@@ -164,8 +164,6 @@ section{padding:84px 0}
 .lh-pin.sel i{outline:3px solid #23206B;transform:scale(1.25)}
 .lh-me{width:20px;height:20px;border-radius:50%;background:#3B82F6;border:3px solid #fff;box-shadow:0 0 0 8px rgba(59,130,246,.25)}
 @keyframes halo{0%{transform:scale(.8);opacity:.7}100%{transform:scale(2.6);opacity:0}}
-.leaflet-container{font-family:var(--fb)}
-.leaflet-popup-content{margin:12px 14px;font-size:14px;color:#16152B}
 .maperr{position:absolute;inset:0;z-index:500;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;background:rgba(18,17,58,.88);color:#fff;font-size:16px}
 .maperr.on{display:flex}
 .maperr a{color:var(--gold);font-weight:700}

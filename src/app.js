@@ -141,9 +141,13 @@ function renderDev() {
     </div>`;
 }
 
+const INDIA = { lat: 22.5, lng: 79 };
+const mapFail = () => $('#maperr').classList.add('on');
+
 function pinIcon(d) {
-  return L.divIcon({ className: '', iconSize: [22, 22], iconAnchor: [11, 11],
-    html: `<div class="lh-pin${d.id === selId ? ' sel' : ''}"><b style="background:${COLOR[d.st]}"></b><i style="background:${COLOR[d.st]}"></i></div>` });
+  const on = d.id === selId;
+  return { path: google.maps.SymbolPath.CIRCLE, scale: on ? 11 : 8, fillColor: COLOR[d.st], fillOpacity: d.st === 'off' ? .75 : 1,
+    strokeColor: on ? '#23206B' : '#FFFFFF', strokeWeight: on ? 4 : 3 };
 }
 
 function select(id, fly) {
@@ -151,54 +155,46 @@ function select(id, fly) {
   const d = DEVICES.find(x => x.id === id);
   renderList(); renderDev();
   if (!map) return;
-  Object.values(markers).forEach(m => m.setIcon(pinIcon(m.dev)));
-  if (offRing) { map.removeLayer(offRing); offRing = null; }
-  if (d.st === 'off') offRing = L.circle([d.lat, d.lng], { radius: 8000, color: '#8F8DA8', dashArray: '6 6', fillOpacity: .08 }).addTo(map);
-  if (fly) map.flyTo([d.lat, d.lng], d.st === 'off' ? 11 : 14, { duration: 1.2 });
+  Object.values(markers).forEach(m => { m.setIcon(pinIcon(m.dev)); m.setZIndex(m.dev.id === id ? 10 : 1); });
+  if (offRing) { offRing.setMap(null); offRing = null; }
+  if (d.st === 'off') offRing = new google.maps.Circle({ map, center: { lat: d.lat, lng: d.lng }, radius: 8000,
+    strokeColor: '#8F8DA8', strokeWeight: 2, strokeOpacity: .8, fillColor: '#8F8DA8', fillOpacity: .08 });
+  if (fly) { map.panTo({ lat: d.lat, lng: d.lng }); map.setZoom(d.st === 'off' ? 11 : 14); }
 }
 
 function applyFilter() {
   $$('.filters button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === filter)));
-  if (map) Object.values(markers).forEach(m => { visible(m.dev) ? m.addTo(map) : map.removeLayer(m); });
+  Object.values(markers).forEach(m => m.setVisible(visible(m.dev)));
   renderList();
 }
 $$('.filters button').forEach(b => b.addEventListener('click', () => { filter = b.dataset.f; applyFilter(); }));
 
-function initMap() {
-  if (typeof L === 'undefined') { $('#maperr').classList.add('on'); return; }
-  map = L.map('lhmap', { zoomControl: true, scrollWheelZoom: false, minZoom: 4, maxBounds: [[2, 60], [40, 102]] }).setView([22.5, 79], 5);
-  map.on('focus click', () => map.scrollWheelZoom.enable());
-  map.on('blur', () => map.scrollWheelZoom.disable());
-  // Esri needs no key or Referer; OSM refuses Referer-less requests (e.g. file://), so it is the fallback.
-  const SOURCES = [
-    ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', 'Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'],
-    ['https://tile.openstreetmap.org/{z}/{x}/{y}.png', '&copy; OpenStreetMap contributors']
-  ];
-  const useSource = (i) => {
-    let loaded = 0, failed = 0;
-    const layer = L.tileLayer(SOURCES[i][0], { maxZoom: 19, attribution: SOURCES[i][1] })
-      .on('tileload', () => { loaded++; $('#maperr').classList.remove('on'); })
-      .on('tileerror', () => {
-        if (++failed < 4 || loaded) return;
-        map.removeLayer(layer);
-        if (i + 1 < SOURCES.length) useSource(i + 1); else $('#maperr').classList.add('on');
-      })
-      .addTo(map);
-  };
-  useSource(0);
-  DEVICES.forEach(d => {
-    if (d.st === 'off') return;
-    const m = L.marker([d.lat, d.lng], { icon: pinIcon(d), keyboard: true, title: d.name });
-    m.dev = d;
-    m.on('click', () => select(d.id, false));
-    markers[d.id] = m;
+window.lhInitMap = function () {
+  map = new google.maps.Map($('#lhmap'), {
+    center: INDIA, zoom: 5, minZoom: 4, gestureHandling: 'cooperative', mapTypeControl: false, streetViewControl: false,
+    fullscreenControl: true, clickableIcons: false,
+    restriction: { latLngBounds: { north: 40, south: 2, west: 60, east: 102 }, strictBounds: false }
   });
-  DEVICES.filter(d => d.st === 'off').forEach(d => {
-    const m = L.marker([d.lat, d.lng], { icon: pinIcon(d), opacity: .7, title: d.name });
-    m.dev = d; m.on('click', () => select(d.id, false)); markers[d.id] = m;
+  DEVICES.forEach(d => {
+    const m = new google.maps.Marker({ map, position: { lat: d.lat, lng: d.lng }, icon: pinIcon(d), title: `${d.name} · ${d.city}` });
+    m.dev = d;
+    m.addListener('click', () => select(d.id, false));
+    markers[d.id] = m;
   });
   applyFilter();
   select(selId, false);
+};
+// Google calls this when the key is invalid or the page's referrer isn't allowed for it.
+window.gm_authFailure = mapFail;
+
+function loadGoogleMaps() {
+  if (!MAPS_KEY) return mapFail();
+  const s = document.createElement('script');
+  s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(MAPS_KEY)}&callback=lhInitMap&v=weekly&region=IN&language=${lang}`;
+  s.async = true;
+  s.onerror = mapFail;
+  document.head.appendChild(s);
+  setTimeout(() => { if (!map) mapFail(); }, 10000);
 }
 
 /* simulate live check-ins */
@@ -208,40 +204,38 @@ setInterval(() => {
   const d = pool[Math.floor(Math.random() * pool.length)];
   d.min = 0.2;
   d.bat = Math.max(5, Math.min(100, d.bat + (d.chg ? 1 : -1)));
-  if (d.acc) { d.lat += (Math.random() - .5) * .0008; d.lng += (Math.random() - .5) * .0008; if (markers[d.id]) markers[d.id].setLatLng([d.lat, d.lng]); }
+  if (d.acc) { d.lat += (Math.random() - .5) * .0008; d.lng += (Math.random() - .5) * .0008; markers[d.id]?.setPosition({ lat: d.lat, lng: d.lng }); }
   renderList();
   if (d.id === selId) renderDev();
 }, 6000);
 
-/* search */
-$('#search').addEventListener('submit', async (e) => {
+/* search (Geocoding API) */
+$('#search').addEventListener('submit', (e) => {
   e.preventDefault();
   const q = $('#q').value.trim();
   if (!q || !map) return;
   toast(t('map.searching'));
-  try {
-    const r = await fetch(`https://nominatim.openstreetmap.org/search?format=json&countrycodes=in&limit=1&accept-language=${lang}&q=${encodeURIComponent(q)}`);
-    const [hit] = await r.json();
-    if (!hit) return toast(t('map.notFound'));
-    const b = hit.boundingbox.map(Number);
-    map.flyToBounds([[b[0], b[2]], [b[1], b[3]]], { maxZoom: 14, duration: 1.2 });
-    toast(hit.display_name.split(',').slice(0, 3).join(','));
-  } catch { toast(t('map.notFound')); }
+  new google.maps.Geocoder().geocode({ address: q, componentRestrictions: { country: 'IN' }, language: lang }, (res, status) => {
+    if (status !== 'OK' || !res?.length) return toast(t('map.notFound'));
+    map.fitBounds(res[0].geometry.viewport);
+    toast(res[0].formatted_address);
+  });
 });
 
 /* my location */
 $('#me').addEventListener('click', () => {
   if (!navigator.geolocation) return toast(t('map.meNo'));
   navigator.geolocation.getCurrentPosition(p => {
-    const ll = [p.coords.latitude, p.coords.longitude];
     if (!map) return;
-    if (meMarker) map.removeLayer(meMarker);
-    meMarker = L.marker(ll, { icon: L.divIcon({ className: '', iconSize: [20, 20], iconAnchor: [10, 10], html: '<div class="lh-me"></div>' }) })
-      .addTo(map).bindPopup(`<b>${t('map.meHere')}</b><br>${ll[0].toFixed(5)}, ${ll[1].toFixed(5)} · ±${Math.round(p.coords.accuracy)} m`).openPopup();
-    map.flyTo(ll, 15, { duration: 1.2 });
+    const ll = { lat: p.coords.latitude, lng: p.coords.longitude };
+    meMarker?.setMap(null);
+    meMarker = new google.maps.Marker({ map, position: ll, zIndex: 20, title: t('map.meHere'),
+      icon: { path: google.maps.SymbolPath.CIRCLE, scale: 9, fillColor: '#3B82F6', fillOpacity: 1, strokeColor: '#FFFFFF', strokeWeight: 3 } });
+    new google.maps.InfoWindow({ content: `<b>${t('map.meHere')}</b><br>${ll.lat.toFixed(5)}, ${ll.lng.toFixed(5)} · ±${Math.round(p.coords.accuracy)} m` }).open({ map, anchor: meMarker });
+    map.panTo(ll); map.setZoom(15);
   }, err => toast(err.code === 1 ? t('map.meDenied') : t('map.meNo')), { enableHighAccuracy: true, timeout: 12000 });
 });
-$('#india').addEventListener('click', () => map && map.flyTo([22.5, 79], 5, { duration: 1 }));
+$('#india').addEventListener('click', () => { if (map) { map.panTo(INDIA); map.setZoom(5); } });
 
 /* download */
 try { new QRCode($('#qr'), { text: APK_URL, width: 200, height: 200, colorDark: '#23206B', colorLight: '#FFFFFF', correctLevel: QRCode.CorrectLevel.M }); } catch {}
@@ -249,5 +243,5 @@ $('#copy').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(APK_URL); toast(t('dl.copied')); } catch { toast(APK_URL); }
 });
 
-initMap();
+loadGoogleMaps();
 setLang(new URLSearchParams(location.search).get('lang') || store.get('lh-lang') || (navigator.language || 'en').slice(0, 2));

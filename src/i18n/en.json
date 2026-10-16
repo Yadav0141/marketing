@@ -49,7 +49,7 @@
     "consentNote": "Location is shown only for customers who opted in. Staff must request access, and every view is logged.",
     "meHere": "You are here", "meDenied": "Location permission was denied in your browser.", "meNo": "Your browser can't share location.",
     "notFound": "No place found for that search.", "searching": "Searching…",
-    "tiles": "Map tiles can't load in this preview.", "tilesLink": "Open the live website"
+    "tiles": "Google Maps can't load in this preview.", "tilesLink": "Open the live website"
   },
   "how": {
     "eyebrow": "How it works", "title": "From application to last EMI",
